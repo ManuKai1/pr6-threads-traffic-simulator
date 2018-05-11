@@ -62,10 +62,15 @@ public class SimWindow extends JFrame implements Listener {
 	//Para los SplitPane
 	private final double VERTICAL_SPLIT = 0.3, HORIZONTAL_SPLIT = 0.5;
 	
-	//Para el Spinner
+	//Para el Spinner de tiempo
 	private final int INITIAL_STEPS = 1;
 	private final int MIN_TIME = 1;
 	private final int MAX_TIME = 500;
+	
+	//Para el Spinner de intervalos
+	private final int INITIAL_DELAY = 100;
+	private final int MIN_DELAY = 0;
+	private final int MAX_DELAY = 9999;
 	
 	//Para las áreas de texto
 	private final String EVENTS_TITLE = "Events";
@@ -165,6 +170,9 @@ public class SimWindow extends JFrame implements Listener {
 	private JSpinner stepsSpinner = new JSpinner();	
 	private JTextField timeViewer = new JTextField("" + 0, 5);
 	
+	// ** SPINNER (SELECCIÓN DE RETRASO DE EJECUCIÓN) ** //
+	private JSpinner delaySpinner = new JSpinner();	
+	
 	// ** ÁREAS DE TEXTO (EVENTOS E INFORMES) ** //
 	private JTextArea eventsTextArea = new JTextArea();
 	private JTextArea reportsTextArea = new JTextArea();
@@ -216,6 +224,12 @@ public class SimWindow extends JFrame implements Listener {
 					"Run the simulator",
 					KeyEvent.VK_P, "control shift P", 
 					() -> runSimulator());
+	
+	private SimulatorAction stop =
+			new SimulatorAction("Stop", "stop.png", 
+					"Stop the simulator",
+					KeyEvent.VK_X, "control shift X", 
+					() -> stopSimulator());
 
 	private SimulatorAction reset =
 			new SimulatorAction("Reset", "reset.png",
@@ -366,6 +380,7 @@ public class SimWindow extends JFrame implements Listener {
 		fileMenu.add(exit);
 		
 		simulatorMenu.add(run);
+		simulatorMenu.add(stop);
 		simulatorMenu.add(reset);
 		
 		
@@ -401,12 +416,18 @@ public class SimWindow extends JFrame implements Listener {
 		
 		toolBar.add(insertEvents);
 		toolBar.add(run);
+		toolBar.add(stop);
 		toolBar.add(reset);
 		insertEvents.setEnabled(false);
 		run.setEnabled(false);
+		stop.setEnabled(false);
 		reset.setEnabled(false);
 		
 		toolBar.addSeparator();
+		
+		toolBar.add(new JLabel("  Delay:  "));
+		delaySpinner.setModel(new SpinnerNumberModel(INITIAL_DELAY, MIN_DELAY, MAX_DELAY, 100));
+		toolBar.add(delaySpinner);
 		
 		toolBar.add(new JLabel("  Steps:  "));
 		stepsSpinner.setModel(new SpinnerNumberModel(INITIAL_STEPS, MIN_TIME, MAX_TIME, 1));
@@ -802,6 +823,18 @@ public class SimWindow extends JFrame implements Listener {
 	}
 
 	/**
+	 * Ejecuta el simulador el número de pasos que
+	 * el usuario haya seleccionado con un delay
+	 * que el usuario haya seleccionado.
+	 */
+	private void runWithThread(){
+		//TODO
+		stop.setEnabled(true);
+		//Creación de hilo que ejecute runSimulator n veces
+		
+	}
+	
+	/**
 	 * Método que ejecuta el simulador el número 
 	 * de pasos que el usuario haya seleccionado.
 	 */
@@ -827,12 +860,25 @@ public class SimWindow extends JFrame implements Listener {
 	}
 	
 	/**
+	 * Detiene el simulador
+	 */
+	private void stopSimulator() {
+		// TODO Auto-generated method stub
+		
+		// Interrupción de hilo
+		
+		
+		stop.setEnabled(false);
+		enableButtonsAfterStop();
+	}
+	
+	/**
 	 * Resetea el simulador
 	 */
 	private void resetSimulator() {
 		control.getSimulator().reset();
 	}
-
+	
 	/**
 	 * Método que genera en su área los informes
 	 * seleccionados, correspondientes al tiempo actual.
@@ -940,6 +986,38 @@ public class SimWindow extends JFrame implements Listener {
 	    insertEvents.setEnabled(false);
 	}	
 
+	/**
+	 * Reactiva todos los botones cuando el usuario
+	 * pulsa stop y detiene la ejecución del simulador.
+	 */
+	private void enableButtonsAfterStop(){
+		load.setEnabled(true);
+		run.setEnabled(true);
+		reset.setEnabled(true);
+		generateRep.setEnabled(true);
+		//Sólo se activan si hay texto de reports
+		clearRep.setEnabled(!reportsTextArea.getText().isEmpty());
+		saveRep.setEnabled(!reportsTextArea.getText().isEmpty());
+		changeOutput.setEnabled(true);
+		exit.setEnabled(true);
+	}
+	
+	/**
+	 * Desactiva todos los botones menos el de stop
+	 * para poder ejecutar el simulador en su hilo.
+	 */
+	private void disableButtonsForRunning(){
+		disableEventButtons();
+		load.setEnabled(false);
+		run.setEnabled(false);
+		reset.setEnabled(false);
+		generateRep.setEnabled(false);
+		clearRep.setEnabled(false);
+		saveRep.setEnabled(false);
+		changeOutput.setEnabled(false);
+		exit.setEnabled(false);
+	}
+	
 	/**
 	 * A partir de la lista de elementos de 
 	 * {@code EventsTable}, descarta aquellos
