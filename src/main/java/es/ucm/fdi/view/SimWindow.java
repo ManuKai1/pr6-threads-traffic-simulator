@@ -10,14 +10,12 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
-
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -29,12 +27,13 @@ import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 
 
+
 import org.apache.commons.cli.ParseException;
 
 import es.ucm.fdi.control.Controller;
+import es.ucm.fdi.control.StepsThread;
 import es.ucm.fdi.ini.Ini;
 import es.ucm.fdi.ini.IniSection;
-
 import es.ucm.fdi.model.SimObj.Junction;
 import es.ucm.fdi.model.SimObj.Road;
 import es.ucm.fdi.model.SimObj.SimObject;
@@ -43,7 +42,6 @@ import es.ucm.fdi.model.events.Event;
 import es.ucm.fdi.model.simulation.RoadMap;
 import es.ucm.fdi.model.simulation.TrafficSimulation.Listener;
 import es.ucm.fdi.model.simulation.TrafficSimulation.UpdateEvent;
-
 import es.ucm.fdi.util.Describable;
 import es.ucm.fdi.util.MultiTreeMap;
 import es.ucm.fdi.util.TableDataType;
@@ -188,6 +186,8 @@ public class SimWindow extends JFrame implements Listener {
 	// ** GRAFO ** //
 	private SimGraph simGraph;
 
+	// ** HILO DE EJECUCIÓN ** //
+	private StepsThread thread;
 
 
 
@@ -223,7 +223,7 @@ public class SimWindow extends JFrame implements Listener {
 			new SimulatorAction("Run", "play.png", 
 					"Run the simulator",
 					KeyEvent.VK_P, "control shift P", 
-					() -> runSimulator());
+					() -> runWithThread());
 	
 	private SimulatorAction stop =
 			new SimulatorAction("Stop", "stop.png", 
@@ -706,6 +706,7 @@ public class SimWindow extends JFrame implements Listener {
 			generateRep.setEnabled(false);
 			reset.setEnabled(false);
 			run.setEnabled(false);
+			stop.setEnabled(false);
 			eventsTable.clear();
 			junctionsTable.clear();
 			roadsTable.clear();
@@ -828,30 +829,29 @@ public class SimWindow extends JFrame implements Listener {
 	 * que el usuario haya seleccionado.
 	 */
 	private void runWithThread(){
-		//TODO
-		stop.setEnabled(true);
 		//Creación de hilo que ejecute runSimulator n veces
-		
+		thread = new StepsThread(
+				() -> disableButtonsForRunning(),
+				() -> runSimulator(),
+				() -> enableButtonsAfterStop()
+				);
+		thread.start((int)stepsSpinner.getValue(),
+				(int)delaySpinner.getValue());
 	}
 	
 	/**
-	 * Método que ejecuta el simulador el número 
-	 * de pasos que el usuario haya seleccionado.
+	 * Método que ejecuta el simulador 
+	 * un tick.
 	 */
 	private void runSimulator() {
 		try {
-			generateRep.setEnabled(true);
-			control.getSimulator().execute((int) stepsSpinner.getValue(),
+			control.getSimulator().execute(1,
 					reports);
 
 			// Se actualiza la tabla de eventos.
 			int minTime = control.getSimulator().getCurrentTime();
 			
 			updateEventsTable(minTime);
-			if(reports != null){
-				clearRep.setEnabled(true);
-				saveRep.setEnabled(true);
-			}
 		} catch (IOException e) {
 			generateRep.setEnabled(false);
 			JOptionPane.showMessageDialog(this,
@@ -863,13 +863,7 @@ public class SimWindow extends JFrame implements Listener {
 	 * Detiene el simulador
 	 */
 	private void stopSimulator() {
-		// TODO Auto-generated method stub
-		
-		// Interrupción de hilo
-		
-		
-		stop.setEnabled(false);
-		enableButtonsAfterStop();
+		thread.stop();
 	}
 	
 	/**
@@ -988,10 +982,12 @@ public class SimWindow extends JFrame implements Listener {
 
 	/**
 	 * Reactiva todos los botones cuando el usuario
-	 * pulsa stop y detiene la ejecución del simulador.
+	 * pulsa stop, salvo este último, que se desactiva.
 	 */
 	private void enableButtonsAfterStop(){
 		load.setEnabled(true);
+		if(!eventsTextArea.getText().isEmpty())
+			enableEventButtons();
 		run.setEnabled(true);
 		reset.setEnabled(true);
 		generateRep.setEnabled(true);
@@ -1003,7 +999,7 @@ public class SimWindow extends JFrame implements Listener {
 	}
 	
 	/**
-	 * Desactiva todos los botones menos el de stop
+	 * Desactiva todos los botones menos el de stop, que lo activa,
 	 * para poder ejecutar el simulador en su hilo.
 	 */
 	private void disableButtonsForRunning(){
@@ -1011,6 +1007,7 @@ public class SimWindow extends JFrame implements Listener {
 		load.setEnabled(false);
 		run.setEnabled(false);
 		reset.setEnabled(false);
+		stop.setEnabled(true);
 		generateRep.setEnabled(false);
 		clearRep.setEnabled(false);
 		saveRep.setEnabled(false);
