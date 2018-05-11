@@ -3,3 +3,6 @@
 target/
 *.class
 *.out
+*.classpath
+.project
+*.prefs
