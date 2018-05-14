@@ -32,10 +32,6 @@ public class NewDirtRoad extends NewRoad {
         super(newTime, ID, lgth, lim, fromID, toID);
     }
 
-
-
-
-
     // ** MÉTODO DE EJECUCIÓN ** //
     /**
      * {@inheritDoc}
@@ -67,11 +63,6 @@ public class NewDirtRoad extends NewRoad {
         }
     }
 
-    
-    
-    
-    
-    
     // ** MÉTODO DE DESCRIPCIÓN ** //
     /**
      * <p>
@@ -93,10 +84,6 @@ public class NewDirtRoad extends NewRoad {
         return description.toString();
     }
 
-    
-    
-    
-    
     // ** MÉTODO DE NUEVA CARRETERA ** //
     /**
      * Método que genera una nueva {@code DirtRoad}

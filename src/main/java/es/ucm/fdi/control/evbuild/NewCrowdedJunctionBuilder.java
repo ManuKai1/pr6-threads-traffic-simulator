@@ -27,9 +27,6 @@ public class NewCrowdedJunctionBuilder extends EventBuilder {
      */
     private static final String TYPE = "mc";
 
-
-
-
     // ** CONSTRUCTOR ** //
     /**
      * Constructor de {@link NewCrowdedJunctionBuilder} que pasa
@@ -39,10 +36,6 @@ public class NewCrowdedJunctionBuilder extends EventBuilder {
     public NewCrowdedJunctionBuilder() {
         super(SECTION_TAG);
     }
-
-
-
-
 
     // ** MÉTODO DE PARSE ** //
     /**

@@ -19,9 +19,6 @@ public class NewJunctionBuilder extends EventBuilder {
 	 * para representar este tipo de eventos.
 	 */
 	private static final String SECTION_TAG = "new_junction";
-	
-
-
 
 	// ** CONSTRUCTOR ** //
 	/**
@@ -32,10 +29,6 @@ public class NewJunctionBuilder extends EventBuilder {
 	public NewJunctionBuilder() {
 		super(SECTION_TAG);
 	}
-	
-
-
-
 
 	// ** MÉTODO DE PARSE ** //
 	/**

@@ -16,11 +16,7 @@ public class NewJunction extends Event {
 	 * Identificador del objeto de simulación.
 	 */
 	protected String id;
-	
-	
-	
-	
-	
+
 	// ** CONSTRUCTOR ** //
 	/**
 	 * Constructor de {@link NewJunction}.
@@ -33,12 +29,7 @@ public class NewJunction extends Event {
 		super(newTime);
 		id = ID;
 	}
-	
-	
-	
-	
-	
-	
+
 	// ** MÉTODO DE EJECUCIÓN ** //
 	/**
 	 * {@inheritDoc}
@@ -70,10 +61,6 @@ public class NewJunction extends Event {
 		}
 	}
 
-	
-	
-	
-	
 	// ** MÉTODO DE DESCRIPCIÓN ** //
 	/**
 	 * <p>
@@ -95,10 +82,6 @@ public class NewJunction extends Event {
 		return 	description.toString();
 	}
 	
-	
-	
-	
-	
 	// ** MÉTODO DE NUEVA INTERSECCIÓN ** //
 	/**
 	 * Método que genera una nueva {@code Junction}
@@ -109,11 +92,6 @@ public class NewJunction extends Event {
 	protected Junction newJunction() {
 		return new Junction(id);
 	}
-
-
-
-
-
 
 	// ** MÉTODO DE COMPARACIÓN ** //
 	/**

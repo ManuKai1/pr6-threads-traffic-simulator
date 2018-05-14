@@ -16,10 +16,6 @@ public class HighwayRoad extends Road {
      */
     private int numLanes;
 
-
-
-
-
     // ** CONSTRUCTOR ** //
     /**
      * Constructor de {@link HighwayRoad}.
@@ -38,13 +34,6 @@ public class HighwayRoad extends Road {
         numLanes = lanes;
     }
     
-
-
-
-
-
-
-
     // ** MÉTODOS COMPLEMENTARIOS DE AVANCE ** //
     /**
      * Calcula la velocidad base de la {@code HighwayRoad}:   
@@ -101,13 +90,6 @@ public class HighwayRoad extends Road {
             }
         }
     }
-
-    
-    
-    
-    
-    
-    
     
     // ** MÉTODO DE INFORME ** //
     /**

@@ -81,12 +81,6 @@ public class Road extends SimObject {
 	 * {@code toJunction} está verde para la {@code Road}.
 	 */
 	private boolean isGreen = false;
-	
-
-
-
-
-
 
 	// ** COMPARADORES ** //
 	/**
@@ -153,12 +147,6 @@ public class Road extends SimObject {
 		// ROADEND - (v1, 0.1s) < (v2, 0.5s) < (v3, 2s) < (v4, 3s) - ROADBEGIN
 	}
 
-
-
-
-
-
-
 	// ** CLASE INTERNA ** //
 	/**
 	 * Clase interna que guarda cada {@code Vehicle} con 
@@ -182,16 +170,6 @@ public class Road extends SimObject {
 		}
 	}
 
-
-
-
-
-
-
-
-
-
-
 	// ** CONSTRUCTOR ** //	
 	/**
 	 * Constructor de {@link Road}.
@@ -214,13 +192,6 @@ public class Road extends SimObject {
 		getInOwnJunctions();	
 	}
 
-	
-	
-	
-	
-	
-	
-	
 	// ** MÉTODO DE AVANCE (+ COMPLEMENTARIOS) ** //
 	/**
 	 * {@inheritDoc}
@@ -327,23 +298,6 @@ public class Road extends SimObject {
 		return ( Math.min(speedLimit, congestionSpeed) );
 	}
 
-
-
-
-
-
-	
-
-	
-
-	
-
-
-
-
-
-
-
 	// ** MÉTODO DE INFORME (+ COMPLEMENTARIOS) ** //
 	/**
 	 * Genera una {@code IniSection} que informa de los 
@@ -415,12 +369,6 @@ public class Road extends SimObject {
 		return state;
 	}
 
-
-
-
-
-
-
 	// ** MÉTODO DE DESCRIPCIÓN (+ COMPLEMENTARIOS) ** //
 	/**
 	 * {@inheritDoc} Añade una {@code Road} al map, con 
@@ -481,17 +429,6 @@ public class Road extends SimObject {
 
 		return state.toString();
 	}
-
-
-
-
-
-
-
-
-
-
-
 
 	// ** MÉTODOS ADICIONALES (PARA AVANCE GENERAL) ** //
 	/**
@@ -615,17 +552,6 @@ public class Road extends SimObject {
 		isGreen = green;
 	}
 	
-
-
-
-
-
-
-
-
-
-
-
 	// ** MÉTODOS ADICIONALES (DE INFO) ** //
 	/**
 	 * <p>

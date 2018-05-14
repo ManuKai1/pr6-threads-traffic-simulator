@@ -25,11 +25,6 @@ public class DirtRoad extends Road {
             Junction fromJ, Junction toJ) {
         super(identifier, len, spLimit, fromJ, toJ);
     }
-
-    
-    
-    
-    
     
     // ** MÉTODOS COMPLEMENTARIOS DE AVANCE ** //
     /**
@@ -76,13 +71,7 @@ public class DirtRoad extends Road {
             }
         }
     }
-
-
-
-
-
-
-
+    
     // ** MÉTODO DE INFORME (+ COMPLEMENTARIOS) ** //
     /**
      * Genera una {@code IniSection} que informa de los 

@@ -32,11 +32,6 @@ public class NewBikeVehicle extends NewVehicle {
 		super(newTime, ID, max, trip);
 	}
 
-	
-	
-	
-	
-	
 	// ** MÉTODO DE EJECUCIÓN ** //
 	/**
 	 * {@inheritDoc}
@@ -65,10 +60,6 @@ public class NewBikeVehicle extends NewVehicle {
 		}
 	}
 
-	
-	
-	
-	
 	// ** MÉTODO DE DESCRIPCIÓN ** //
 	/**
 	 * <p>
@@ -89,11 +80,7 @@ public class NewBikeVehicle extends NewVehicle {
 
 		return description.toString();
 	}
-	
-	
-	
-	
-	
+
 	// ** MÉTODO DE NUEVO VEHÍCULO ** //
 	/**
 	 * Método que genera un nuevo {@code BikeVehicle}

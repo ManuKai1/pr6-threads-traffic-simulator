@@ -40,10 +40,6 @@ public class NewCarVehicle extends NewVehicle {
 	 */
 	private long randomSeed;
 	
-
-
-
-
 	// ** CONSTRUCTOR ** //
 	/**
 	 * Constructor de {@link NewCarVehicle}.
@@ -67,13 +63,7 @@ public class NewCarVehicle extends NewVehicle {
 		faultDuration = breakDuration;
 		randomSeed = seed;
 	}
-	
-	
-	
-	
-	
-	
-	
+
 	// ** MÉTODO DE EJECUCIÓN ** //
 	/**
 	 * {@inheritDoc}
@@ -103,10 +93,6 @@ public class NewCarVehicle extends NewVehicle {
 		}
 	}
 
-	
-	
-	
-	
 	// ** MÉTODO DE DESCRIPCIÓN ** //
 	/**
 	 * <p>
@@ -127,9 +113,6 @@ public class NewCarVehicle extends NewVehicle {
 
 		return description.toString();
 	}
-	
-	
-	
 	
 	// ** MÉTODO DE NUEVO VEHÍCULO ** //
 	/**

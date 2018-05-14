@@ -1,5 +1,7 @@
 package es.ucm.fdi.control;
 
+import java.util.logging.Logger;
+
 /**
  * Clase que comienza un hilo para ejecutar
  * pasos con un determinado delay.
@@ -8,7 +10,7 @@ package es.ucm.fdi.control;
  */
 public class StepsThread {
 	
-	//A ejecutar antes de comenzar
+	/** A ejecutar antes de comenzar */
 	private Runnable before;
 	
 	//A ejecutar en el proceso

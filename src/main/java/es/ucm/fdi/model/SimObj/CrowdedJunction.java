@@ -27,10 +27,6 @@ public class CrowdedJunction extends Junction {
     * Tiempo consumido (unidades: ticks)
     */
     protected int elapsedTime = 0;
-
-    
-    
-    
     
     // ** CONSTRUCTOR ** //
     /**
@@ -47,11 +43,6 @@ public class CrowdedJunction extends Junction {
             timeLapses.put(inc, 0);
         }
     }
-
-    
-    
-    
-    
     
     // ** MÉTODOS COMPLEMENTARIOS DE AVANCE ** //
     /**
@@ -210,14 +201,6 @@ public class CrowdedJunction extends Junction {
         return crowdedPos;
     }
 
-
-
-
-
-
-
-
-
     // ** MÉTODO DE INFORME (+ COMPLEMENTARIOS) ** //
     /**
      * {@inheritDoc}
@@ -296,13 +279,6 @@ public class CrowdedJunction extends Junction {
     private int lastingLightTime(Road road) {
         return ( timeLapses.get(road) - elapsedTime );
     }
-
-
-
-
-
-
-
 
     // ** MÉTODODS ADICIONALES ** //
     /**

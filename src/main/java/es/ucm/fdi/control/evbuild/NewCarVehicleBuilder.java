@@ -29,9 +29,6 @@ public class NewCarVehicleBuilder extends EventBuilder {
 	 */
 	private static final String TYPE = "car";
 
-
-
-
 	// ** CONSTRUCTOR ** //
 	/**
 	 * Constructor de {@link NewCarVehicleBuilder} que 
@@ -41,10 +38,6 @@ public class NewCarVehicleBuilder extends EventBuilder {
 	public NewCarVehicleBuilder() {
 		super(SECTION_TAG);
 	}
-
-
-
-
 
 	// ** MÉTODO DE PARSE ** //
 	/**

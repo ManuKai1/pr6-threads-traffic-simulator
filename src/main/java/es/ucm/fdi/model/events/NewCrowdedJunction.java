@@ -24,10 +24,6 @@ public class NewCrowdedJunction extends NewJunction {
         super(newTime, ID);
     }
 
-    
-    
-    
-    
     // ** MÉTODO DE EJECUCIÓN ** //
     /**
      * {@inheritDoc}
@@ -52,12 +48,6 @@ public class NewCrowdedJunction extends NewJunction {
         }
     }
 
-    
-    
-    
-    
-    
-    
     // ** MÉTODO DE DESCRIPCIÓN ** //
     /**
 	 * <p>
@@ -79,9 +69,6 @@ public class NewCrowdedJunction extends NewJunction {
 		return 	description.toString();
 	}
 
-    
-    
-    
     // ** MÉTODO DE NUEVA INTERSECCIÓN ** //
     /**
      * Método que genera una nueva {@code CrowdedJunction}

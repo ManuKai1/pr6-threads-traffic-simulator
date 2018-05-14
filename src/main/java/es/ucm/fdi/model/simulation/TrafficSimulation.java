@@ -54,12 +54,6 @@ public class TrafficSimulation {
 			return time;
 		}
 	}
-	
-
-
-
-
-
 
 	// ** ATRIBUTOS ** //
 	/**
@@ -85,13 +79,6 @@ public class TrafficSimulation {
 	 */
 	private int time = 0;
 	
-
-
-
-
-
-
-
 	// ** CONSTRUCTOR ** //
 	/**
 	 * Constructor vacío del simulador.
@@ -99,12 +86,8 @@ public class TrafficSimulation {
 	public TrafficSimulation() {
 		/*NADA*/
 	}
-
-
-
-
-
-	/** MÉTODO DE EJECUCIÓN DE LA SIMULACIÓN (+ COMPLEMENTARIOS) ** //
+	
+	//** MÉTODO DE EJECUCIÓN DE LA SIMULACIÓN (+ COMPLEMENTARIOS) ** //
 	/**
 	 * Simula un número determinado de ticks y guarda 
 	 * el fichero de salida de esta ejecución.
@@ -230,16 +213,6 @@ public class TrafficSimulation {
 			}
 		}
 	}
-
-
-
-
-
-
-
-
-
-
 	
 	/**
 	 * Añade un {@code Event} al mapa de {@code Event}s 
@@ -265,14 +238,6 @@ public class TrafficSimulation {
 		events.putValue(e.getTime(), e);
 		fireUpdateEvent(EventType.NEW_EVENT, "New Event error.");
 	}
-	
-	
-	
-	
-	
-
-
-
 	
 	// ** MÉTODOS DE GENERACIÓN DE INFORMER ** //
 	/**
@@ -328,16 +293,6 @@ public class TrafficSimulation {
 
 		return iniFile;
 	}
-	
-	
-	
-
-
-
-
-
-
-
 
 	// ** MÉTODOS DE MODIFICACIÓN DE LA SIMULACIÓN ** //
 	/**
@@ -399,14 +354,6 @@ public class TrafficSimulation {
 		roadMap.addJunction(newJunction);
 	}
 
-	
-
-
-
-
-
-
-
 	// ** MÉTODOS DE LISTENERS ** //
 	/**
 	 *  Añade un {@code Listener} a la lista 
@@ -453,11 +400,7 @@ public class TrafficSimulation {
 		time = 0;
 		fireUpdateEvent(EventType.RESET, "Reset error");
 	}
-
-
-
-
-
+	
 	// ** MÉTODOS DE ACCESO ** //
 	/**
 	 * Devuelve el mapa de la simulación.

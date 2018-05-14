@@ -22,9 +22,6 @@ public class FaultyVehicleBuilder extends EventBuilder {
 	 */
 	private static final String SECTION_TAG = "make_vehicle_faulty";
 
-
-
-
 	// ** CONSTRUCTOR ** //	
 	/**
 	 * Constructor de {@link FaultyVehicleBuilder} que 
@@ -34,9 +31,6 @@ public class FaultyVehicleBuilder extends EventBuilder {
 	public FaultyVehicleBuilder() {
 		super(SECTION_TAG);
 	}
-	
-
-
 
 	// ** MÉTODO DE PARSE ** //
 	/**

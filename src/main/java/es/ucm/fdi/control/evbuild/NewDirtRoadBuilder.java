@@ -27,9 +27,6 @@ public class NewDirtRoadBuilder extends EventBuilder {
 	 */
 	private static final String TYPE = "dirt";
 
-
-
-
 	// ** CONSTRUCTOR ** //
     /**
 	 * Constructor de {@link NewDirtRoadBuilder} que 
@@ -39,10 +36,6 @@ public class NewDirtRoadBuilder extends EventBuilder {
     public NewDirtRoadBuilder() {
         super(SECTION_TAG);
     }
-
-
-
-
 
 	// ** MÉTODO DE PARSE ** //
     /**

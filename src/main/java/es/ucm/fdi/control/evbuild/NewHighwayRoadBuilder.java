@@ -27,9 +27,6 @@ public class NewHighwayRoadBuilder extends EventBuilder {
 	 */
 	private static final String TYPE = "lanes";
 
-
-
-
 	// ** CONSTRUCTOR ** //
     /**
 	 * Constructor de {@link NewHighwayRoadBuilder} que 
@@ -39,9 +36,6 @@ public class NewHighwayRoadBuilder extends EventBuilder {
     public NewHighwayRoadBuilder() {
         super(SECTION_TAG);
     }
-
-
-
 
 	// ** MÉTODO DE PARSE ** //
 	/**

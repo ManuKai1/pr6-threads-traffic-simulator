@@ -21,9 +21,6 @@ public class NewRoadBuilder extends EventBuilder {
 	 */
 	private static final String SECTION_TAG = "new_road";
 
-
-
-
 	// ** CONSTRUCTOR ** //
 	/**
 	 * Constructor de {@link NewRoadBuilder} que pasa
@@ -33,10 +30,6 @@ public class NewRoadBuilder extends EventBuilder {
 	public NewRoadBuilder() {
 		super(SECTION_TAG);
 	}
-	
-
-
-
 
 	// ** MÉTODO DE PARSE ** //
 	/**

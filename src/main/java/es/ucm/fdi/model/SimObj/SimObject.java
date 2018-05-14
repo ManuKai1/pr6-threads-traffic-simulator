@@ -19,10 +19,6 @@ public abstract class SimObject implements Describable {
 	 */
 	protected String id;	
 
-
-
-
-
 	// ** MÉTODO DE AVANCE ** //
 	/**
 	 * Método de avance de cualquier objeto de la 
@@ -42,9 +38,6 @@ public abstract class SimObject implements Describable {
 	// ** MÉTODO DE INFORME ** //
 	public abstract IniSection generateIniSection(int simTime);
 
-	
-	
-	
 	// ** CONSTRUCTOR ** //
 	/**
 	 * Constructor de {@link SimObject}.
@@ -55,10 +48,6 @@ public abstract class SimObject implements Describable {
 	public SimObject(String identifier) {
 		id = identifier;
 	}
-	
-	
-
-
 	
 	// ** MÉTODO DE COMPARACIÓN ** //
 	/**
@@ -91,8 +80,6 @@ public abstract class SimObject implements Describable {
 		SimObject other = (SimObject) obj;
 		return (id == other.id);
 	}	
-
-
 
 	// ** GETTERS/SETTERS ** //
 	/**

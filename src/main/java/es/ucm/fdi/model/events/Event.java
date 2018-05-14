@@ -20,10 +20,6 @@ public abstract class Event implements Describable {
 	 */
 	private int time;
 
-
-
-
-
 	// ** CONSTRUCTOR ** //
 	/**
 	 * Constructor de {@link Event}.
@@ -35,9 +31,6 @@ public abstract class Event implements Describable {
 		time = newTime;
 	}
 
-
-
-
 	// ** MÉTODO DE EJECUCIÓN ** //
 	/**
 	 * Ejecuta el {@code Event} en la simulación {@code sim}.
@@ -48,11 +41,6 @@ public abstract class Event implements Describable {
 	public abstract void execute(TrafficSimulation sim) 
 			throws AlreadyExistingSimObjException, NonExistingSimObjException;
 
-	
-	
-	
-
-	
 	// ** MÉTODOS DE DESCRIPCIÓN ** //
 	/**
 	 * {@inheritDoc}
@@ -67,11 +55,6 @@ public abstract class Event implements Describable {
 	}
 
 	protected abstract String getEventDescription();
-
-
-
-
-
 
 	// ** MÉTODO DE COMPARACIÓN ** //
 	/**
@@ -103,10 +86,6 @@ public abstract class Event implements Describable {
 		Event other = (Event) obj;
 		return (time == other.getTime());
 	}
-
-
-
-
 
 	// ** GETTERS/SETTERS ** //
 	/**

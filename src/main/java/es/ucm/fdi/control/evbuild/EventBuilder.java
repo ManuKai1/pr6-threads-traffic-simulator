@@ -19,10 +19,6 @@ public abstract class EventBuilder {
 	 */
 	protected String iniName;
 	
-
-
-
-
 	// ** CONSTRUCTOR ** //
 	/**
 	 * Constructor de {@link EventBuilder}.
@@ -33,24 +29,13 @@ public abstract class EventBuilder {
 	public EventBuilder(String name) {
 		iniName = name;
 	}
-
-
-
-
 	
 	// ** MÉTODO ABSTRACTO ** //
 	abstract Event parse(IniSection ini);
-	
-
-
-
-
-
 
 	// ** MÉTODOS DE COMPROBACIÓN ** //
 	// Utilizados para comprobar los datos de los
 	// archivos .ini.
-
 
 	/**
 	 * <p>

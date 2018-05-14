@@ -26,9 +26,6 @@ public class NewRobinJunctionBuilder extends EventBuilder {
      */
     private static final String TYPE = "rr";
 
-
-
-
     // ** CONSTRUCTOR ** //
     /**
      * Constructor de {@link NewRobinJunctionBuilder} que 

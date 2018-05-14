@@ -23,11 +23,6 @@ public class NewRobinJunction extends NewJunction {
      */
     private int maxTime;
 
-
-
-
-
-
     // ** CONSTRUCTOR ** //
     /**
      * Constructor de {@link NewRobinJunction}.
@@ -44,11 +39,6 @@ public class NewRobinJunction extends NewJunction {
         maxTime = maxT;
     }
 
-   
-   
-   
-   
-    
     // ** MÉTODO DE EJECUCIÓN ** //
     /**
      * {@inheritDoc}
@@ -75,12 +65,6 @@ public class NewRobinJunction extends NewJunction {
         }
     }
 
-    
-    
-    
-    
-    
-    
     // ** MÉTODO DE DESCRIPCIÓN ** //
     /**
 	 * <p>
@@ -102,11 +86,6 @@ public class NewRobinJunction extends NewJunction {
 		return 	description.toString();
 	}
 
-    
-    
-    
-    
-    
     // ** MÉTODO DE NUEVA INTERSECCIÓN ** //
     /**
      * Método que genera una nueva {@code RobinJunction}ç

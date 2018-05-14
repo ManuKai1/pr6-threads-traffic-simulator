@@ -19,8 +19,6 @@ public class RoadMap {
     private Map<String, Road>       roadObjects = new LinkedHashMap<>();
     private Map<String, Vehicle>    vehicleObjects = new LinkedHashMap<>();
 
-
-
     // ** CONSTRUCTOR ** //
     /**
      * Constructor vacío de {@link RoadMap}
@@ -28,11 +26,6 @@ public class RoadMap {
     public RoadMap() {
         /*NADA*/
     }
-
-
-
-
-
 
     // ** MÉTODOS DE ACCESO ** //
     /**
@@ -61,11 +54,6 @@ public class RoadMap {
     public Map<String, Vehicle> getVehicles() {
         return vehicleObjects;
     }
-
-
-
-
-
 
     // ** MÉTODOS DE ADICIÓN ** //
     /**
@@ -97,12 +85,6 @@ public class RoadMap {
     public void addVehicle(Vehicle newVehicle) {
         vehicleObjects.put(newVehicle.getID(), newVehicle);
     }
-
-
-
-
-
-
 
     // ** MÉTODOS DE COMPROBACIÓN ** //
     /**
@@ -143,13 +125,7 @@ public class RoadMap {
     	//O(1)
     	return vehicleObjects.containsKey(id);
     }
-
-
-
-
-
-
-
+    
     // ** MÉTODOS DE BÚSQUEDA ** //
     /**
      * Método que busca un <code>Vehicle</code> en el 
@@ -195,11 +171,6 @@ public class RoadMap {
     	//O(1)
     	return roadObjects.get(id);
     }
-
-
-
-
-
 
     // ** MÉTODO DE CLEAR ** //
     /**

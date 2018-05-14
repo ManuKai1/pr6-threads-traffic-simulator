@@ -37,13 +37,6 @@ public class CarVehicle extends Vehicle {
 	 * Distancia transcurrida desde la última avería.
 	 */
 	private int kmSinceFaulty = 0;
-	
-
-
-
-
-
-
 
 	// ** CONSTRUCTOR ** //
 	/**
@@ -68,12 +61,6 @@ public class CarVehicle extends Vehicle {
 		faultDuration = breakDuration;
 		randomSeed = new Random(seed);
 	}
-	
-
-
-
-
-
 
 	// ** MÉTODO DE AVANCE ** //
 	/**
@@ -117,14 +104,7 @@ public class CarVehicle extends Vehicle {
 
 		kmSinceFaulty += kilometrage - oldKilometrage;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
+
 	// ** MÉTODO DE INFORME ** //
 	/**
 	 * Genera una {@code IniSection} que informa de

@@ -19,9 +19,6 @@ public class NewHighwayRoad extends NewRoad {
      */
     private int numLanes;
 
-    
-    
-    
     // ** CONSTRUCTOR ** //
     /**
      * Constructor de {@link NewHighwayRoad}.
@@ -42,10 +39,6 @@ public class NewHighwayRoad extends NewRoad {
         numLanes = lanes;
     }
 
-    
-    
-    
-    
     // ** MÉTODO DE EJECUCIÓN ** //
     /**
      * {@inheritDoc}
@@ -75,11 +68,6 @@ public class NewHighwayRoad extends NewRoad {
         }
     }
 
-    
-    
-    
-    
-    
     // ** MÉTODO DE DESCRIPCIÓN ** //
     /**
      * <p>
@@ -101,10 +89,6 @@ public class NewHighwayRoad extends NewRoad {
         return description.toString();
     }
 
-    
-    
-    
-    
     // ** MÉTODO DE NUEVA CARRETERA ** //
     /**
      * Método que genera una nueva {@code HighwayRoad}

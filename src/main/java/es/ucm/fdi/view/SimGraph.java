@@ -31,9 +31,6 @@ public class SimGraph extends JPanel {
      */
     private RoadMap roadMap;
 
-
-
-
     // ** CONSTRUCTOR ** //
     /**
      * Constructos de {@link SimGraph} que recibe el
@@ -52,12 +49,6 @@ public class SimGraph extends JPanel {
         this.add(_graphComp);
         this.setVisible(true);
     }
-
-
-
-
-
-
 
     // ** MÉTODO DE GENERACIÓND DEL GRAFO ** //
     /**

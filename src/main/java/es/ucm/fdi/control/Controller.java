@@ -70,11 +70,6 @@ public class Controller {
 		}
     }
 
-
-
-
-
-
     // ** CONSTRUCTOR ** //
     /**
      * Constructor de {@link Controller} que recibe 
@@ -93,10 +88,6 @@ public class Controller {
         batchTimeLimit = time;
         simulator = new TrafficSimulation();
     }
-
-
-
-
 
     // ** EJECUCIÓN EN BATCH ** //
     /**
@@ -154,10 +145,6 @@ public class Controller {
 			throw e4;
 		} 
     }
-
-
-
-
 
     // ** MÉTODOS DE SIMULACIÓN ** //
     /**
@@ -221,10 +208,6 @@ public class Controller {
 			throw e;
 		} 
     }
-
-
-
-
 
     // ** SETTERS/GETTERS ** //
     /**

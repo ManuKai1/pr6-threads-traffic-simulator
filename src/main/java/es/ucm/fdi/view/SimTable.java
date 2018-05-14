@@ -46,11 +46,6 @@ public class SimTable extends JPanel {
      * Modelo de tabla para la {@code JTable}.
      */
     private ListOfMapsTableModel model;
-    
-
-
-
-
 
     // ** CLASE INTERNA ** //
     /**
@@ -159,11 +154,6 @@ public class SimTable extends JPanel {
         }
     }
 
-
-
-
-
-
     //** CONSTRUCTOR ** //
     /**
      * Constructor de una {@link #SimTable} que recibe un
@@ -187,13 +177,6 @@ public class SimTable extends JPanel {
                 JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED)
         );   
     }
-
-
-
-
-
-
-
 
     // ** MÉTODOS DE MODIFICACIÓN ** //
     /** Método interno que llama indica al modelo que
@@ -225,11 +208,6 @@ public class SimTable extends JPanel {
     	tableElements.clear();
     	update();
     }
-
-
-
-
-
 
     // ** MÉTODOS DE ACCESO ** //
     /**

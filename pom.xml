@@ -12,7 +12,8 @@
 
   <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.main>es.ucm.fdi.launcher.Main</project.main>
+        <project.main>es.ucm.fdi.launcher.ExampleMain</project.main>
+        
     </properties>
 
     <build>

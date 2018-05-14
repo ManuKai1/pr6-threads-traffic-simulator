@@ -65,11 +65,6 @@ public class ExampleMain {
 		start(args);
 	}
 
-
-
-
-
-
 	// ** MÉTODOS DE PARSEO DE ARGS ** //
 	/**
 	 * Parses introduced {@code args}. If error found, a 
@@ -277,14 +272,6 @@ public class ExampleMain {
 		}
 	}
 
-	
-	
-
-
-
-
-
-
 	// ** MÉTODOS DE TESTEO ** //
 	/**
 	 * <p>
@@ -376,15 +363,6 @@ public class ExampleMain {
  		);
 	}
 
-
-
-
-
-
-
-
-
-
 	// ** EJECUCIÓN EN BATCH ** //
 	/**
 	 * Run the simulation in {@code batch} mode.
@@ -413,14 +391,6 @@ public class ExampleMain {
 		}
 	}
 
-
-
-
-
-
-
-
-
 	// ** EJECUCIÓN EN GUI ** //
 	/**
 	 * Run the simulation in {@code GUI} mode.
@@ -429,38 +399,20 @@ public class ExampleMain {
 	 */
 	private static void startGUIMode() throws Exception {
 		// Argumentos
-		Ini iniInput = null;
-		if(_inFile != null){
-			iniInput = new Ini(_inFile);
-		}
-
-		// Controlador de salida nula
-		Controller control = new Controller(iniInput, null, _timeLimit);
+		Ini iniInput = (_inFile != null) ? new Ini(_inFile) : null;
 
 		// Interfaz gráfica
 		try {
 			SwingUtilities.invokeAndWait(
-				new Runnable() {
-					public void run() {
-						new SimWindow(control, _inFile);
-					}
-				}
+				() -> new SimWindow(
+						new Controller(iniInput, null, _timeLimit),
+						_inFile)
 			);
-		}
-		catch (Exception e) {
+		} catch (Exception e) {
 			throw e;
-		}
-		
+		}		
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
 	// ** EJECUCIÓN DEL PROGRAMA CON LÍNEA DE COMANDOS ** //
 	/**
 	 * Runs the simulation in with a {@code CommandLine} as

@@ -41,11 +41,6 @@ public class Junction extends SimObject {
 	 */
 	protected int light = -1;	
 
-
-
-
-
-
 	// ** CONSTRUCTOR ** //
 	/**
 	 * Constructor de {@link Junction}.
@@ -55,11 +50,6 @@ public class Junction extends SimObject {
 	public Junction(String identifier) {
 		super(identifier);
 	}
-
-
-
-
-
 
 	// ** MÉTODO DE AVANCE (+ COMPLEMENTARIOS) ** //
 	/**
@@ -182,15 +172,6 @@ public class Junction extends SimObject {
 		incomingRoads.get(nextRoad).setLight(true);
 	}
 
-
-
-
-
-
-
-
-
-
 	// ** MÉTODO DE INFORME (+ COMPLEMENTARIOS) ** //
 	/**
 	 * Genera una {@code IniSection} que informa de los 
@@ -240,17 +221,7 @@ public class Junction extends SimObject {
 
 		return queues.toString();
 	}
-
-
-
-
-
-
-
-
-
-
-
+	
 	// ** MÉTODO DE DESCRIPCIÓN (+ COMPLEMENTARIOS) ** //
 	/**
 	 * {@inheritDoc}
@@ -327,16 +298,6 @@ public class Junction extends SimObject {
 
 		return red.toString();
 	}
-
-	
-
-
-
-
-
-
-
-
 	
 	// ** MÉTODOS ADICIONALES ** //
 	/**
@@ -376,7 +337,6 @@ public class Junction extends SimObject {
 	public void addNewIncomingRoad(Road newRoad) {
 		incomingRoads.put(newRoad.getID(), newRoad);
 	}
-	
 	
 	/**
 	 * Método que devuelve la {@code Road} entre dos 

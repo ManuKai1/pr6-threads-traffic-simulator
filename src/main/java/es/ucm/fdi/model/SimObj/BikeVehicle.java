@@ -27,11 +27,6 @@ public class BikeVehicle extends Vehicle {
 		super(identifier, trp, max);
 	}
 
-
-
-
-
-
 	// ** MÉTODOS COMPLEMENTARIOS DE AVANCE ** //
 	/**
 	 * Modifica el tiempo de avería según el comportamiento 
@@ -46,12 +41,7 @@ public class BikeVehicle extends Vehicle {
 		if ( actualSpeed > (maxSpeed / 2) ) {
 			breakdownTime += addedBreakdownTime;
 		}
-	}	
-	
-
-
-
-
+	}
 
 	// ** MÉTODO DE INFORME ** //
 	/**

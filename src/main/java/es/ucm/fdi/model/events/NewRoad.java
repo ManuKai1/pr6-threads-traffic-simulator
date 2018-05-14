@@ -41,11 +41,6 @@ public class NewRoad extends Event {
 	 */
 	protected String toJunctionID;	
 
-	
-	
-	
-	
-	
 	// ** CONSTRUCTOR ** //
 	/**
 	 * Constructor de {@link NewRoad}.
@@ -67,12 +62,7 @@ public class NewRoad extends Event {
 		speedLimit = lim;
 		length = lgth;
 	}
-	
-	
-	
-	
-	
-	
+
 	// ** MÉTODO DE EJECUCIÓN ** //
 	/**
 	 * {@inheritDoc}
@@ -114,13 +104,6 @@ public class NewRoad extends Event {
 		}
 	}
 
-	
-	
-	
-	
-	
-	
-	
 	// ** MÉTODO DE DESCRIPCIÓN ** //
 	/**
 	 * <p>
@@ -142,11 +125,6 @@ public class NewRoad extends Event {
 		return description.toString();
 	}
 
-	
-	
-	
-	
-	
 	// ** MÉTODOD DE NUEVA CARRETERA ** /7
 	/**
 	 * Método que genera una nueva {@code Road}
@@ -179,12 +157,7 @@ public class NewRoad extends Event {
 			);
 		}
 	}
-	
-	
-	
-	
-	
-	
+
 	// ** MÉTODO DE COMPARACIÓN ** //
 	/**
 	 * {@inheritDoc}

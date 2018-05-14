@@ -57,11 +57,6 @@ public class RobinJunction extends Junction {
      */
     protected boolean usefulGreen = true;
 
-
-
-
-
-
     // ** CONSTRUCTOR ** //
     /**
      * Constructor de {@link RobinJunction}.
@@ -75,12 +70,6 @@ public class RobinJunction extends Junction {
         minLightTime = minTime;
         maxLightTime = maxTime;
     }
-
-
-
-
-
-
 
     // ** MÉTODOS COMPLEMENTARIOS DE AVANCE ** //
     /**
@@ -207,14 +196,7 @@ public class RobinJunction extends Junction {
             usefulGreen = true;
         }
     }
-	
-	
-    
-    
-    
-    
-    
-    
+
     // ** MÉTODO DE INFORME (+ COMPLEMENTARIOS) ** //
     /**
      * {@inheritDoc}
@@ -293,12 +275,6 @@ public class RobinJunction extends Junction {
         return timeLapses.get(road) - elapsedTime;
     }
 
-    
-    
-    
-    
-    
-    
     // ** MÉTODOS ADICIONALES ** //
     /**
      * Añade una nueva {@code Road} de entrada a la 

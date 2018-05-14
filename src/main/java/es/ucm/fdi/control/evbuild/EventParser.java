@@ -38,9 +38,6 @@ public class EventParser {
 		new NewBikeVehicleBuilder()
 	};
 
-
-
-
 	// ** CONSTRUCTOR ** //
 	/**
 	 * Constructor de {@link EventParser}.
@@ -48,10 +45,6 @@ public class EventParser {
 	public EventParser() {
 		/*NADA*/
 	}
-	
-
-
-
 
 	// ** MÉTODO DE PARSE ** //
 	/**

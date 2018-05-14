@@ -32,10 +32,6 @@ public class NewVehicle extends Event {
 	 * a lo largo del simulador.
 	 */
 	protected List<String> tripID;
-	
-
-
-
 
 	// ** CONSTRUCTOR ** //
 	/**
@@ -54,11 +50,6 @@ public class NewVehicle extends Event {
 		tripID = trip;
 	}
 
-	
-	
-	
-	
-	
 	// ** MÉTODO DE EJECUCIÓN ** //
 	/**
 	 * {@inheritDoc}
@@ -99,10 +90,6 @@ public class NewVehicle extends Event {
 		}
 	}
 
-	
-	
-	
-	
 	// ** MÉTODO DE DESCRIPCIÓN ** //
 	/**
 	 * <p>
@@ -123,11 +110,7 @@ public class NewVehicle extends Event {
 
 		return description.toString();
 	}
-	
-	
-	
-	
-	
+
 	// ** MÉTODO DE NUEVO VEHÍCULO ** //
 	/**
 	 * Método que genera un nuevo {@code Vehicle}
@@ -169,10 +152,6 @@ public class NewVehicle extends Event {
 			throw new NonExistingSimObjException(e.getMessage());
 		}
 	}
-
-
-
-
 
 	// ** MÉTODO DE COMPARACIÓN ** //
 	/**

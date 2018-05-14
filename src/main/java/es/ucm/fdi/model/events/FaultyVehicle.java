@@ -24,10 +24,6 @@ public class FaultyVehicle extends Event {
 	 */
 	private int duration;
 	
-
-
-
-
 	// ** CONSTRUCTOR ** //
 	/**
 	 * Constructor de {@link FaultyVehicle}.
@@ -45,11 +41,6 @@ public class FaultyVehicle extends Event {
 		duration = dur;
 	}
 	
-
-
-
-
-
 	// ** MÉTODO DE EJECUCIÓN ** //
 	/**
 	 * {@inheritDoc}
@@ -76,10 +67,6 @@ public class FaultyVehicle extends Event {
 			throw e;
 		}
 	}
-
-
-
-
 
 	// ** MÉTODO DE DESCRIPCIÓN ** //
 	/**
@@ -112,10 +99,6 @@ public class FaultyVehicle extends Event {
 
 		return 	description.toString();
 	}
-
-
-
-
 
 	// ** MÉTODO DE COMPARACIÓN ** //
 	/**
