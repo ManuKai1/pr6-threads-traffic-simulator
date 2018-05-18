@@ -1,8 +1,8 @@
 package es.ucm.fdi.model.events;
 
 
-import es.ucm.fdi.model.SimObj.DirtRoad;
-import es.ucm.fdi.model.SimObj.Junction;
+import es.ucm.fdi.model.simobj.DirtRoad;
+import es.ucm.fdi.model.simobj.Junction;
 import es.ucm.fdi.model.simulation.AlreadyExistingSimObjException;
 import es.ucm.fdi.model.simulation.NonExistingSimObjException;
 import es.ucm.fdi.model.simulation.TrafficSimulation;

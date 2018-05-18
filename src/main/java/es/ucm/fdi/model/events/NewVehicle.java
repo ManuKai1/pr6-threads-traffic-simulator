@@ -3,8 +3,8 @@ package es.ucm.fdi.model.events;
 import java.util.ArrayList;
 import java.util.List;
 
-import es.ucm.fdi.model.SimObj.Junction;
-import es.ucm.fdi.model.SimObj.Vehicle;
+import es.ucm.fdi.model.simobj.Junction;
+import es.ucm.fdi.model.simobj.Vehicle;
 import es.ucm.fdi.model.simulation.AlreadyExistingSimObjException;
 import es.ucm.fdi.model.simulation.NonExistingSimObjException;
 import es.ucm.fdi.model.simulation.SimulationException;

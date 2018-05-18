@@ -1,7 +1,7 @@
 package es.ucm.fdi.model.events;
 
 
-import es.ucm.fdi.model.SimObj.CrowdedJunction;
+import es.ucm.fdi.model.simobj.CrowdedJunction;
 import es.ucm.fdi.model.simulation.AlreadyExistingSimObjException;
 import es.ucm.fdi.model.simulation.TrafficSimulation;
 

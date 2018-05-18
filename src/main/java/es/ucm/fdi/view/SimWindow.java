@@ -50,11 +50,11 @@ import es.ucm.fdi.control.Controller;
 import es.ucm.fdi.control.StepsThread;
 import es.ucm.fdi.ini.Ini;
 import es.ucm.fdi.ini.IniSection;
-import es.ucm.fdi.model.SimObj.Junction;
-import es.ucm.fdi.model.SimObj.Road;
-import es.ucm.fdi.model.SimObj.SimObject;
-import es.ucm.fdi.model.SimObj.Vehicle;
 import es.ucm.fdi.model.events.Event;
+import es.ucm.fdi.model.simobj.Junction;
+import es.ucm.fdi.model.simobj.Road;
+import es.ucm.fdi.model.simobj.SimObject;
+import es.ucm.fdi.model.simobj.Vehicle;
 import es.ucm.fdi.model.simulation.RoadMap;
 import es.ucm.fdi.model.simulation.TrafficSimulation;
 import es.ucm.fdi.model.simulation.TrafficSimulation.Listener;
@@ -707,12 +707,7 @@ public class SimWindow extends JFrame {
 	 */
 	private void runSimulator() {
 		SwingUtilities.invokeLater(() -> {
-			try {
-				control.getSimulator().execute(1, reports);
-			} catch (IOException e) {
-				generateRep.setEnabled(false);
-				JOptionPane.showMessageDialog(this, e.getMessage());
-			}
+			control.getSimulator().execute(1, reports);
 		});
 
 		// Se actualiza la tabla de eventos.

@@ -5,7 +5,7 @@ import java.util.List;
 import es.ucm.fdi.ini.IniSection;
 import es.ucm.fdi.model.events.Event;
 import es.ucm.fdi.model.events.NewCarVehicle;
-import es.ucm.fdi.model.SimObj.CarVehicle;
+import es.ucm.fdi.model.simobj.CarVehicle;
 
 /**
  * Clase que construye un {@code Event} 

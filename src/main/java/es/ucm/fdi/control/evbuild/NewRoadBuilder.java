@@ -4,7 +4,7 @@ package es.ucm.fdi.control.evbuild;
 import es.ucm.fdi.ini.IniSection;
 import es.ucm.fdi.model.events.Event;
 import es.ucm.fdi.model.events.NewRoad;
-import es.ucm.fdi.model.SimObj.Road;
+import es.ucm.fdi.model.simobj.Road;
 
 /**
  * Clase que construye un {@code Event} 

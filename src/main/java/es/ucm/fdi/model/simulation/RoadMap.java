@@ -3,9 +3,9 @@ package es.ucm.fdi.model.simulation;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import es.ucm.fdi.model.SimObj.Junction;
-import es.ucm.fdi.model.SimObj.Road;
-import es.ucm.fdi.model.SimObj.Vehicle;
+import es.ucm.fdi.model.simobj.Junction;
+import es.ucm.fdi.model.simobj.Road;
+import es.ucm.fdi.model.simobj.Vehicle;
 
 /**
  * Clase que guarda los {@link SimObj} introducidos durante

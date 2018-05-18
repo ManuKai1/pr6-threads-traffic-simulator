@@ -371,8 +371,14 @@ public class ExampleMain {
 	 * 						of files
 	 */
 	private static void startBatchMode() throws Exception {		
-		// Argumentos
-		Ini iniInput = new Ini(_inFile);
+		Ini iniInput;
+		try{
+			iniInput = new Ini(_inFile);
+		}
+		catch(IOException e){
+			throw new IOException("Couldn't find the following file: "
+					+ _inFile);
+		}
 		OutputStream os = System.out;
 		if(_outFile != null){
 			File outFile = new File(_outFile);
@@ -398,8 +404,14 @@ public class ExampleMain {
 	 * @throws Exception 	if Swing interface fails
 	 */
 	private static void startGUIMode() throws Exception {
-		// Argumentos
-		Ini iniInput = (_inFile != null) ? new Ini(_inFile) : null;
+		Ini iniInput;
+		try{
+			iniInput = (_inFile != null) ? new Ini(_inFile) : null;
+		}
+		catch(IOException e){
+			throw new IOException("Couldn't find the following file: "
+					+ _inFile);
+		}
 
 		// Interfaz gráfica
 		try {
@@ -433,7 +445,7 @@ public class ExampleMain {
 			}
 		}
 		catch(Exception e){
-			e.printStackTrace();
+			System.err.println(e.getMessage());
 			System.err.println("Aborting execution...");
 		}
 	}

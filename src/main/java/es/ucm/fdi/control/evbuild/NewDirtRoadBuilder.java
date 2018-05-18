@@ -3,7 +3,7 @@ package es.ucm.fdi.control.evbuild;
 import es.ucm.fdi.ini.IniSection;
 import es.ucm.fdi.model.events.Event;
 import es.ucm.fdi.model.events.NewDirtRoad;
-import es.ucm.fdi.model.SimObj.DirtRoad;
+import es.ucm.fdi.model.simobj.DirtRoad;
 
 /**
  * Clase que construye un {@code Event} 

@@ -6,10 +6,9 @@ import java.util.Map;
 import javax.swing.JPanel;
 
 import es.ucm.fdi.extra.graphlayout.*;
-
-import es.ucm.fdi.model.SimObj.Junction;
-import es.ucm.fdi.model.SimObj.Road;
-import es.ucm.fdi.model.SimObj.Vehicle;
+import es.ucm.fdi.model.simobj.Junction;
+import es.ucm.fdi.model.simobj.Road;
+import es.ucm.fdi.model.simobj.Vehicle;
 import es.ucm.fdi.model.simulation.RoadMap;
 
 /**

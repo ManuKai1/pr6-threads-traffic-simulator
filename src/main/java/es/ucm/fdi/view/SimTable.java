@@ -12,7 +12,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.AbstractTableModel;
 
-import es.ucm.fdi.model.SimObj.SimObject;
+import es.ucm.fdi.model.simobj.SimObject;
 import es.ucm.fdi.util.Describable;
 import es.ucm.fdi.util.TableDataType;
 

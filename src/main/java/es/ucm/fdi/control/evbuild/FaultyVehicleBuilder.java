@@ -3,9 +3,9 @@ package es.ucm.fdi.control.evbuild;
 import java.util.List;
 
 import es.ucm.fdi.ini.IniSection;
-import es.ucm.fdi.model.SimObj.Vehicle;
 import es.ucm.fdi.model.events.Event;
 import es.ucm.fdi.model.events.FaultyVehicle;
+import es.ucm.fdi.model.simobj.Vehicle;
 
 /**
  * Clase que construye un {@code Event} 

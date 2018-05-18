@@ -138,12 +138,7 @@ public class Controller {
         // 2 // 
         // Se ejecuta el simulador el número de pasos batchTimeLimit
         // y se actualiza el OutputStream.
-        try {
-			simulate(batchTimeLimit);
-		}
-        catch (IOException e4) {
-			throw e4;
-		} 
+		simulate(batchTimeLimit);
     }
 
     // ** MÉTODOS DE SIMULACIÓN ** //
@@ -190,23 +185,9 @@ public class Controller {
      * 
      * @param time -    número de ticks que se
      *                  ejecutará el simulador
-     * 
-     * @throws SimulationException              if an error ocurred during 
-     *                                          the execution of events in 
-     *                                          the simulation
-     * @throws IOException                      if an error ocurred during 
-     *                                          report generation in the 
-     *                                          simulation
      */
-    public void simulate(int time) 
-            throws SimulationException, IOException {
-
-        try {
-			simulator.execute(time, outStream);
-		}
-        catch (IOException e) {
-			throw e;
-		} 
+    public void simulate(int time) {
+		simulator.execute(time, outStream);
     }
 
     // ** SETTERS/GETTERS ** //
@@ -223,7 +204,8 @@ public class Controller {
         try {
 			iniInput = new Ini(is);
 		} catch (IOException e) {
-			throw e;
+			throw new IOException(e.getMessage() + 
+					"when trying to open file " + iniInput);
 		}
     }
 

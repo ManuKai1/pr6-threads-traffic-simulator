@@ -8,11 +8,11 @@ import java.util.List;
 import javax.swing.SwingUtilities;
 
 import es.ucm.fdi.ini.Ini;
-import es.ucm.fdi.model.SimObj.Junction;
-import es.ucm.fdi.model.SimObj.Road;
-import es.ucm.fdi.model.SimObj.SimObject;
-import es.ucm.fdi.model.SimObj.Vehicle;
 import es.ucm.fdi.model.events.Event;
+import es.ucm.fdi.model.simobj.Junction;
+import es.ucm.fdi.model.simobj.Road;
+import es.ucm.fdi.model.simobj.SimObject;
+import es.ucm.fdi.model.simobj.Vehicle;
 import es.ucm.fdi.util.EventType;
 import es.ucm.fdi.util.MultiTreeMap;
 
@@ -26,30 +26,64 @@ public class TrafficSimulation {
 
 	
 	// ** CLASES INTERNAS (PARA EVENTOS) ** //
+	
+	/**
+	 * Interfaz interna del simulador que han de
+	 * implementar de algún modo todas aquellas clases
+	 * que quieran recibir notificaciones del simulador.
+	 */
 	public interface Listener {
+		/**
+		 * Método a implementar que recibe notificaciones
+		 * del simulador y ejecuta acciones convenientemente.
+		 * @param ue : UpdateEvent con información del evento ocurrido
+		 * @param error : Mensaje de error.
+		 */
 		void update(UpdateEvent ue, String error);
 	}
 	
 	public class UpdateEvent {
 		
+		/** Evento del que informa el simulador
+		 * (ver {@link EventType})*/
 		EventType event;
 		
+		/**
+		 * Constructor dado un tipo de evento.
+		 * @param ev : Evento del que informar.
+		 */
 		public UpdateEvent(EventType ev){
 			event = ev;
 		}
 		
+		/**
+		 * Getter del evento.
+		 * @return Evento del que informar.
+		 */
 		public EventType getEvent() {
 			return event;
 		}
 		
+		/**
+		 * Getter del RoadMap de la simulación.
+		 * @return RoadMap con datos de la simulación.
+		 */
 		public RoadMap getRoadMap() {
 			return roadMap;
 		}
 		
+		/**
+		 * Getter de los eventos a ejecutar.
+		 * @return MultiTreeMap con lista de eventos.
+		 */
 		public MultiTreeMap<Integer, Event> getEventQueue() {
 			return events;
 		}
 		
+		/**
+		 * Getter del tiempo.
+		 * @return Tiempo actual de la simulación.
+		 */
 		public int getCurrentTime() {
 			return time;
 		}
@@ -98,8 +132,7 @@ public class TrafficSimulation {
 	 * @throws IOException	if an IO error ocurred during
 	 * 						reports generation
 	 */
-	public void execute(int steps, OutputStream file) 
-			throws IOException {
+	public void execute(int steps, OutputStream file) {
 
 		// * //
 		// Tiempo límite en que para la simulación.
@@ -133,7 +166,8 @@ public class TrafficSimulation {
 				generateReports(file);
 			}
 			catch (IOException e) {
-				throw e;
+				fireUpdateEvent(EventType.ERROR, e.getMessage());
+				break;
 			}
 
 		}
