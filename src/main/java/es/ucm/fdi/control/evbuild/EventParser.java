@@ -12,8 +12,6 @@ import es.ucm.fdi.model.events.Event;
  */
 public class EventParser {
 
-
-	// ** ATRIBUTOS ** //	
 	/**
 	 * Array con los posibles {@code Event}s
 	 * del simulador.
@@ -38,15 +36,12 @@ public class EventParser {
 		new NewBikeVehicleBuilder()
 	};
 
-	// ** CONSTRUCTOR ** //
 	/**
 	 * Constructor de {@link EventParser}.
 	 */
 	public EventParser() {
-		/*NADA*/
 	}
 
-	// ** MÉTODO DE PARSE ** //
 	/**
 	 * Función de búsqueda de {@code Event} a partir
 	 * de la {@code IniSection} de un archivo con 

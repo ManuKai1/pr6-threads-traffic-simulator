@@ -13,7 +13,6 @@ import es.ucm.fdi.model.simulation.TrafficSimulation;
  */
 public class NewRoad extends Event {
 	
-	// ** ATRIBUTOS ** //
 	/**
 	 * Identificador del objeto de simulación.
 	 */
@@ -41,7 +40,6 @@ public class NewRoad extends Event {
 	 */
 	protected String toJunctionID;	
 
-	// ** CONSTRUCTOR ** //
 	/**
 	 * Constructor de {@link NewRoad}.
 	 * 
@@ -63,7 +61,6 @@ public class NewRoad extends Event {
 		length = lgth;
 	}
 
-	// ** MÉTODO DE EJECUCIÓN ** //
 	/**
 	 * {@inheritDoc}
 	 * <p>
@@ -104,7 +101,6 @@ public class NewRoad extends Event {
 		}
 	}
 
-	// ** MÉTODO DE DESCRIPCIÓN ** //
 	/**
 	 * <p>
 	 * Devuelve la descripción {@code NewRoad}
@@ -125,7 +121,6 @@ public class NewRoad extends Event {
 		return description.toString();
 	}
 
-	// ** MÉTODOD DE NUEVA CARRETERA ** /7
 	/**
 	 * Método que genera una nueva {@code Road}
 	 * a partir de los atributos del evento.
@@ -158,7 +153,6 @@ public class NewRoad extends Event {
 		}
 	}
 
-	// ** MÉTODO DE COMPARACIÓN ** //
 	/**
 	 * {@inheritDoc}
 	 * <p>

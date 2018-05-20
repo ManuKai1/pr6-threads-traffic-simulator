@@ -12,7 +12,6 @@ import es.ucm.fdi.model.simulation.TrafficSimulation;
  */
 public class FaultyVehicle extends Event {
 
-	// ** ATRIBUTOS ** //
 	/**
 	 * Lista con los IDs de los {@code Vehicle}s
 	 * que se van a averiar.
@@ -24,7 +23,6 @@ public class FaultyVehicle extends Event {
 	 */
 	private int duration;
 	
-	// ** CONSTRUCTOR ** //
 	/**
 	 * Constructor de {@link FaultyVehicle}.
 	 * 
@@ -41,7 +39,6 @@ public class FaultyVehicle extends Event {
 		duration = dur;
 	}
 	
-	// ** MÉTODO DE EJECUCIÓN ** //
 	/**
 	 * {@inheritDoc}
 	 * <p>
@@ -68,7 +65,6 @@ public class FaultyVehicle extends Event {
 		}
 	}
 
-	// ** MÉTODO DE DESCRIPCIÓN ** //
 	/**
 	 * <p>
 	 * Devuelve la descripción {@code FaultyVehicle}
@@ -100,7 +96,6 @@ public class FaultyVehicle extends Event {
 		return 	description.toString();
 	}
 
-	// ** MÉTODO DE COMPARACIÓN ** //
 	/**
 	 * {@inheritDoc}
 	 * <p>

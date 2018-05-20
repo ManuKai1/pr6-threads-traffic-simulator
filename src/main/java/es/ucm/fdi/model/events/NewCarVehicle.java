@@ -17,7 +17,6 @@ import es.ucm.fdi.model.simulation.TrafficSimulation;
  */
 public class NewCarVehicle extends NewVehicle {
 	
-	// ** ATRIBUTOS ** //
 	/**
 	 * Entero que representa 
 	 * la resistencia a las averías.
@@ -40,7 +39,6 @@ public class NewCarVehicle extends NewVehicle {
 	 */
 	private long randomSeed;
 	
-	// ** CONSTRUCTOR ** //
 	/**
 	 * Constructor de {@link NewCarVehicle}.
 	 * 
@@ -64,7 +62,6 @@ public class NewCarVehicle extends NewVehicle {
 		randomSeed = seed;
 	}
 
-	// ** MÉTODO DE EJECUCIÓN ** //
 	/**
 	 * {@inheritDoc}
 	 * <p>
@@ -93,7 +90,6 @@ public class NewCarVehicle extends NewVehicle {
 		}
 	}
 
-	// ** MÉTODO DE DESCRIPCIÓN ** //
 	/**
 	 * <p>
 	 * Devuelve la descripción de {@code NewCarVehicle}
@@ -114,7 +110,6 @@ public class NewCarVehicle extends NewVehicle {
 		return description.toString();
 	}
 	
-	// ** MÉTODO DE NUEVO VEHÍCULO ** //
 	/**
 	 * Método que genera un nuevo {@code CarVehicle} 
 	 * a partir de los atributos del evento.

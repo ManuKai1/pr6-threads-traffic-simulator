@@ -11,13 +11,11 @@ import es.ucm.fdi.model.simulation.TrafficSimulation;
  */
 public class NewJunction extends Event {
 
-	// ** ATRIBUTOS ** //
 	/**
 	 * Identificador del objeto de simulación.
 	 */
 	protected String id;
 
-	// ** CONSTRUCTOR ** //
 	/**
 	 * Constructor de {@link NewJunction}.
 	 * 
@@ -30,7 +28,6 @@ public class NewJunction extends Event {
 		id = ID;
 	}
 
-	// ** MÉTODO DE EJECUCIÓN ** //
 	/**
 	 * {@inheritDoc}
 	 * <p>
@@ -61,7 +58,6 @@ public class NewJunction extends Event {
 		}
 	}
 
-	// ** MÉTODO DE DESCRIPCIÓN ** //
 	/**
 	 * <p>
 	 * Devuelve la descripción {@code NewJunction}
@@ -82,7 +78,6 @@ public class NewJunction extends Event {
 		return 	description.toString();
 	}
 	
-	// ** MÉTODO DE NUEVA INTERSECCIÓN ** //
 	/**
 	 * Método que genera una nueva {@code Junction}
 	 * a partir de los actributos del evento.
@@ -93,7 +88,6 @@ public class NewJunction extends Event {
 		return new Junction(id);
 	}
 
-	// ** MÉTODO DE COMPARACIÓN ** //
 	/**
 	 * {@inheritDoc}
 	 * <p>

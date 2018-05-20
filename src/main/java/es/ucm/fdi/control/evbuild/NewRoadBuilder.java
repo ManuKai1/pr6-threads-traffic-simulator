@@ -14,14 +14,12 @@ import es.ucm.fdi.model.simobj.Road;
  */
 public class NewRoadBuilder extends EventBuilder {
 	
-	// ** ATRIBUTOS ** //
 	/**
 	 * Etiqueta utilizada en las {@code IniSection}s
 	 * para representar este tipo de eventos.
 	 */
 	private static final String SECTION_TAG = "new_road";
 
-	// ** CONSTRUCTOR ** //
 	/**
 	 * Constructor de {@link NewRoadBuilder} que pasa
 	 * el atributo {@code SECTION_TAG} al constructor de 
@@ -31,7 +29,6 @@ public class NewRoadBuilder extends EventBuilder {
 		super(SECTION_TAG);
 	}
 
-	// ** MÉTODO DE PARSE ** //
 	/**
 	 * Método de parsing que comprueba si la 
 	 * {@code IniSection} pasada como argumento 

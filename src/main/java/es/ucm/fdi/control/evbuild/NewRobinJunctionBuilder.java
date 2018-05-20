@@ -12,7 +12,6 @@ import es.ucm.fdi.model.events.NewRobinJunction;
  */
 public class NewRobinJunctionBuilder extends EventBuilder {
     
-    // ** ATRIBUTOS ** //
     /**
      * Etiqueta utilizada en las {@code IniSection}s
      * para representar este tipo de eventos.
@@ -26,7 +25,6 @@ public class NewRobinJunctionBuilder extends EventBuilder {
      */
     private static final String TYPE = "rr";
 
-    // ** CONSTRUCTOR ** //
     /**
      * Constructor de {@link NewRobinJunctionBuilder} que 
      * pasa el atributo {@code SECTION_TAG} al 

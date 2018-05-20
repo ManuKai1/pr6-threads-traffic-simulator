@@ -13,13 +13,11 @@ import es.ucm.fdi.model.simulation.TrafficSimulation;
  */
 public class NewHighwayRoad extends NewRoad {
     
-    // ** ATRIBUTOS ** //
     /**
      * Número de carriles de la vía.
      */
     private int numLanes;
 
-    // ** CONSTRUCTOR ** //
     /**
      * Constructor de {@link NewHighwayRoad}.
      * 
@@ -39,7 +37,6 @@ public class NewHighwayRoad extends NewRoad {
         numLanes = lanes;
     }
 
-    // ** MÉTODO DE EJECUCIÓN ** //
     /**
      * {@inheritDoc}
      * <p>
@@ -68,7 +65,6 @@ public class NewHighwayRoad extends NewRoad {
         }
     }
 
-    // ** MÉTODO DE DESCRIPCIÓN ** //
     /**
      * <p>
      * Devuelve la descripción {@code NewHighwayRoad}
@@ -89,7 +85,6 @@ public class NewHighwayRoad extends NewRoad {
         return description.toString();
     }
 
-    // ** MÉTODO DE NUEVA CARRETERA ** //
     /**
      * Método que genera una nueva {@code HighwayRoad}
      * a partir de los atributos del evento.

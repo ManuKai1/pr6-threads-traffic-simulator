@@ -14,7 +14,6 @@ import es.ucm.fdi.model.simulation.TrafficSimulation;
  */
 public class NewDirtRoad extends NewRoad {
 
-    // ** CONSTRUCTOR ** //
     /**
      * Constructor de {@link NewDirtRoad}.
 	 * 
@@ -32,7 +31,6 @@ public class NewDirtRoad extends NewRoad {
         super(newTime, ID, lgth, lim, fromID, toID);
     }
 
-    // ** MÉTODO DE EJECUCIÓN ** //
     /**
      * {@inheritDoc}
      * <p>
@@ -63,7 +61,6 @@ public class NewDirtRoad extends NewRoad {
         }
     }
 
-    // ** MÉTODO DE DESCRIPCIÓN ** //
     /**
      * <p>
      * Devuelve la descripción {@code NewDirtRoad}
@@ -84,7 +81,6 @@ public class NewDirtRoad extends NewRoad {
         return description.toString();
     }
 
-    // ** MÉTODO DE NUEVA CARRETERA ** //
     /**
      * Método que genera una nueva {@code DirtRoad}
      * a partir de los atributos del evento.

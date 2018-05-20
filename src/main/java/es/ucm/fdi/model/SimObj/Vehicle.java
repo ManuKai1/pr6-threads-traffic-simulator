@@ -14,7 +14,6 @@ import es.ucm.fdi.util.TableDataType;
  */
 public class Vehicle extends SimObject {
 
-	// ** ATRIBUTOS ** //
 	/**
 	 * Etiqueta que encabeza el informe de un
 	 * {@code Vehicle} cualquiera.
@@ -84,13 +83,6 @@ public class Vehicle extends SimObject {
 	 */
 	protected int actualSpeed = 0;	
 
-
-
-
-
-
-
-	// ** CONSTRUCTOR ** //
 	/**
 	 * Constructor de {@link Vehicle}.
 	 * 
@@ -120,14 +112,6 @@ public class Vehicle extends SimObject {
 		}
 	}
 	
-
-
-
-
-
-
-
-	// ** MÉTODO DE AVANCE (+ COMPLEMENTARIOS) ** //
 	/**
 	 * {@inheritDoc}
 	 * Método de AVANCE de {@code Vehicle}:
@@ -188,13 +172,6 @@ public class Vehicle extends SimObject {
 		actualSpeed = 0;
 	}
 
-
-
-
-
-
-
-	// ** MÉTODO DE INFORME (+ COMPLEMENTARIOS) ** //
 	/**
 	 * Genera una {@code IniSection} que informa de los atributos del
 	 * {@code Vehicle} en el timmpo del simulador.
@@ -237,15 +214,6 @@ public class Vehicle extends SimObject {
 					"(" + road.getID() + "," + location + ")";
 	}
 
-
-
-
-
-
-
-
-
-	// ** MÉTODO DE DESCRIPCIÓN (+ COMPLEMENTARIOS) ** //
 	/**
 	 * {@inheritDoc}
 	 * Añade una {@code Road} al mapa, con los datos:
@@ -317,17 +285,6 @@ public class Vehicle extends SimObject {
 					Integer.toString(location);
 	}
 
-
-
-
-
-
-
-
-
-
-
-	// ** MÉTODOS ADICIONALES ** //
 	/**
 	 * <p>
 	 * Mueve el {@code Vehicle} a la siguiente {@code Road} 

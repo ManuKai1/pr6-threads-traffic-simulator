@@ -12,7 +12,6 @@ import es.ucm.fdi.model.simulation.SimulationException;
  */
 public class CarVehicle extends Vehicle {
 
-	// ** ATRIBUTOS ** //
 	/**
 	 * Resistencia a las averías.
 	 */
@@ -38,7 +37,6 @@ public class CarVehicle extends Vehicle {
 	 */
 	private int kmSinceFaulty = 0;
 
-	// ** CONSTRUCTOR ** //
 	/**
 	 * Constructor de {@link CarVehicle}.
 	 * 
@@ -62,7 +60,6 @@ public class CarVehicle extends Vehicle {
 		randomSeed = new Random(seed);
 	}
 
-	// ** MÉTODO DE AVANCE ** //
 	/**
 	 * {@inheritDoc}
 	 * <p>
@@ -105,7 +102,6 @@ public class CarVehicle extends Vehicle {
 		kmSinceFaulty += kilometrage - oldKilometrage;
 	}
 
-	// ** MÉTODO DE INFORME ** //
 	/**
 	 * Genera una {@code IniSection} que informa de
 	 * los atributos del {@code CarVehicle} en el 

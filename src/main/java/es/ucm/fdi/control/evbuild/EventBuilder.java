@@ -13,13 +13,11 @@ import es.ucm.fdi.model.events.Event;
  */
 public abstract class EventBuilder {
 
-	// ** ATRIBUTOS ** //
 	/**
 	 * Nombre de la {@code IniSection}.
 	 */
 	protected String iniName;
 	
-	// ** CONSTRUCTOR ** //
 	/**
 	 * Constructor de {@link EventBuilder}.
 	 * 
@@ -30,13 +28,10 @@ public abstract class EventBuilder {
 		iniName = name;
 	}
 	
-	// ** MÉTODO ABSTRACTO ** //
 	abstract Event parse(IniSection ini);
 
-	// ** MÉTODOS DE COMPROBACIÓN ** //
 	// Utilizados para comprobar los datos de los
 	// archivos .ini.
-
 	/**
 	 * <p>
 	 * Método que comprueba si se ha introducido un 

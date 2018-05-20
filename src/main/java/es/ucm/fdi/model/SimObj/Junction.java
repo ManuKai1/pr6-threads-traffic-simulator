@@ -16,7 +16,6 @@ import es.ucm.fdi.util.TableDataType;
  */
 public class Junction extends SimObject {
 	
-	// ** ATRIBUTOS ** //
 	/**
 	 * Etiqueta que encabeza el informe de una
 	 * {@code Junction} cualquiera.
@@ -41,7 +40,6 @@ public class Junction extends SimObject {
 	 */
 	protected int light = -1;	
 
-	// ** CONSTRUCTOR ** //
 	/**
 	 * Constructor de {@link Junction}.
 	 * 
@@ -51,7 +49,6 @@ public class Junction extends SimObject {
 		super(identifier);
 	}
 
-	// ** MÉTODO DE AVANCE (+ COMPLEMENTARIOS) ** //
 	/**
 	 * {@inheritDoc}
 	 * Método de AVANCE de {@code Junction}.
@@ -172,7 +169,6 @@ public class Junction extends SimObject {
 		incomingRoads.get(nextRoad).setLight(true);
 	}
 
-	// ** MÉTODO DE INFORME (+ COMPLEMENTARIOS) ** //
 	/**
 	 * Genera una {@code IniSection} que informa de los 
 	 * atributos de la {@code Junction} en el 
@@ -222,7 +218,6 @@ public class Junction extends SimObject {
 		return queues.toString();
 	}
 	
-	// ** MÉTODO DE DESCRIPCIÓN (+ COMPLEMENTARIOS) ** //
 	/**
 	 * {@inheritDoc}
 	 * Añade una {@code Junction} al mapa, con los
@@ -299,7 +294,6 @@ public class Junction extends SimObject {
 		return red.toString();
 	}
 	
-	// ** MÉTODOS ADICIONALES ** //
 	/**
 	 * Devuelve la Mapa de {@code Road}s entrantes
 	 * 

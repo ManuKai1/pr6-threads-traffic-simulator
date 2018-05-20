@@ -11,7 +11,6 @@ import es.ucm.fdi.model.simulation.TrafficSimulation;
  */
 public class NewCrowdedJunction extends NewJunction {
 
-    // ** CONSTRUCTOR ** //
     /**
      * Constructor de {@link NewCrowdedJunction}.
      * 
@@ -24,7 +23,6 @@ public class NewCrowdedJunction extends NewJunction {
         super(newTime, ID);
     }
 
-    // ** MÉTODO DE EJECUCIÓN ** //
     /**
      * {@inheritDoc}
      * <p>
@@ -48,7 +46,6 @@ public class NewCrowdedJunction extends NewJunction {
         }
     }
 
-    // ** MÉTODO DE DESCRIPCIÓN ** //
     /**
 	 * <p>
 	 * Devuelve la descripción {@code NewCrowdedJunction}
@@ -69,7 +66,6 @@ public class NewCrowdedJunction extends NewJunction {
 		return 	description.toString();
 	}
 
-    // ** MÉTODO DE NUEVA INTERSECCIÓN ** //
     /**
      * Método que genera una nueva {@code CrowdedJunction}
      * a partir de los atributos del evento.

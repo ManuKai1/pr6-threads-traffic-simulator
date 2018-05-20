@@ -10,8 +10,6 @@ import es.ucm.fdi.ini.IniSection;
  */
 public class DirtRoad extends Road {
 
-
-    // ** CONSTRUCTOR ** //
     /**
      * Constructor de {@link DirtRoad}.
      * 
@@ -26,7 +24,6 @@ public class DirtRoad extends Road {
         super(identifier, len, spLimit, fromJ, toJ);
     }
     
-    // ** MÉTODOS COMPLEMENTARIOS DE AVANCE ** //
     /**
      * Calcula la velocidad base de la {@code DirtRoad}: 
      * el límite de velocidad {@code speedLimit}.
@@ -72,7 +69,6 @@ public class DirtRoad extends Road {
         }
     }
     
-    // ** MÉTODO DE INFORME (+ COMPLEMENTARIOS) ** //
     /**
      * Genera una {@code IniSection} que informa de los 
      * atributos de la {@code DirtRoad} en el 

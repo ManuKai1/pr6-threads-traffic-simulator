@@ -15,14 +15,12 @@ import es.ucm.fdi.model.simobj.Vehicle;
  */
 public class FaultyVehicleBuilder extends EventBuilder {
 	
-	// ** ATRIBUTOS ** //
 	/**
 	 * Etiqueta utilizada en las {@code IniSection}s
 	 * para representar este tipo de eventos.
 	 */
 	private static final String SECTION_TAG = "make_vehicle_faulty";
 
-	// ** CONSTRUCTOR ** //	
 	/**
 	 * Constructor de {@link FaultyVehicleBuilder} que 
 	 * pasa el atributo {@code SECTION_TAG} al 
@@ -32,7 +30,6 @@ public class FaultyVehicleBuilder extends EventBuilder {
 		super(SECTION_TAG);
 	}
 
-	// ** MÉTODO DE PARSE ** //
 	/**
 	 * Método de parsing que comprueba si la 
 	 * {@code IniSection} pasada como argumento 

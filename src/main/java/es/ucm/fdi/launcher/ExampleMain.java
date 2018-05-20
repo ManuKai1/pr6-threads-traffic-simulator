@@ -24,7 +24,6 @@ import es.ucm.fdi.view.SimWindow;
 
 public class ExampleMain {
 
-	// ** ATRIBUTOS ** //
 	/**
 	 * Default time limit if none indicated by user.
 	 */
@@ -55,17 +54,10 @@ public class ExampleMain {
 	 */
 	private static String _mode = null;
 
-	
-	
-	
-	
-	// ** MAIN ** //
 	public static void main(String[] args) {
-
 		start(args);
 	}
 
-	// ** MÉTODOS DE PARSEO DE ARGS ** //
 	/**
 	 * Parses introduced {@code args}. If error found, a 
 	 * {@code ParseException} is caught and the program 
@@ -272,7 +264,6 @@ public class ExampleMain {
 		}
 	}
 
-	// ** MÉTODOS DE TESTEO ** //
 	/**
 	 * <p>
 	 * Runs the simulator on all files that end with {@code .ini} 
@@ -397,7 +388,6 @@ public class ExampleMain {
 		}
 	}
 
-	// ** EJECUCIÓN EN GUI ** //
 	/**
 	 * Run the simulation in {@code GUI} mode.
 	 * 
@@ -425,7 +415,6 @@ public class ExampleMain {
 		}		
 	}
 
-	// ** EJECUCIÓN DEL PROGRAMA CON LÍNEA DE COMANDOS ** //
 	/**
 	 * Runs the simulation in with a {@code CommandLine} as
 	 * arguments.
