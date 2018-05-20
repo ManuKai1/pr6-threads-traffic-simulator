@@ -6,13 +6,20 @@ import es.ucm.fdi.model.simulation.AlreadyExistingSimObjException;
 import es.ucm.fdi.model.simulation.NonExistingSimObjException;
 import es.ucm.fdi.model.simulation.TrafficSimulation;
 import es.ucm.fdi.util.Describable;
-import es.ucm.fdi.util.TableDataType;
 
 /**
  * Clase con métodos abstractos que sirve de base
  * para cualquier evento del simulador.
  */
 public abstract class Event implements Describable {
+
+	/**
+	 * Array estático con los nombres de las columnas de
+	 * la {@code SimTable} de {@code Junction}s.
+	 */
+	public static String[] descriptionCols = {
+		"#", "Time", "Type"
+	};
 	
 	/**
 	 * Tiempo de ejecución del evento.
@@ -42,12 +49,12 @@ public abstract class Event implements Describable {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public void describe(Map<TableDataType, Object> out) {
+	public void describe(Map<String, Object> out) {
 		// Inclusión en el mapa.
 		String time = Integer.toString(this.time);
 		String description = getEventDescription();
-		out.put(TableDataType.E_TIME, time);
-		out.put(TableDataType.E_TYPE, description);
+		out.put(descriptionCols[1], time);
+		out.put(descriptionCols[2], description);
 	}
 
 	protected abstract String getEventDescription();

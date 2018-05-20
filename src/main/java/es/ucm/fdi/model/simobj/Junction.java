@@ -8,13 +8,21 @@ import java.util.Map.Entry;
 
 import es.ucm.fdi.ini.IniSection;
 import es.ucm.fdi.model.simulation.SimulationException;
-import es.ucm.fdi.util.TableDataType;
 
 /**
  * Clase que representa un cruce como un objeto
  * de simulación. Hereda de {@link SimObject}
  */
 public class Junction extends SimObject {
+
+	/**
+	 * Array estático con los nombres de las columnas de
+	 * la {@code SimTable} de {@code Junction}s.
+	 */
+	public static String[] descriptionCols = {
+		"Report", "ID",
+		"Type", "Green", "Red"
+	};
 	
 	/**
 	 * Etiqueta que encabeza el informe de una
@@ -226,14 +234,14 @@ public class Junction extends SimObject {
 	 * @param out {@inheritDoc}
 	 */
 	@Override
-	public void describe(Map<TableDataType, Object> out) {
+	public void describe(Map<String, Object> out) {
 		String green = getGreenDescription();
 		String red = getRedDescription();
 		
-		out.put(TableDataType.ID, id);
-		out.put(TableDataType.J_TYPE, getType());
-		out.put(TableDataType.J_GREEN, green);
-		out.put(TableDataType.J_RED, red);
+		out.put(descriptionCols[1], id);
+		out.put(descriptionCols[2], getType());
+		out.put(descriptionCols[3], green);
+		out.put(descriptionCols[4], red);
 	}
 
 	/**

@@ -4,7 +4,6 @@ import java.util.Map;
 
 import es.ucm.fdi.ini.IniSection;
 import es.ucm.fdi.util.Describable;
-import es.ucm.fdi.util.TableDataType;
 
 /**
  * Clase base que representa un objeto cualquiera
@@ -28,7 +27,7 @@ public abstract class SimObject implements Describable {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public abstract void describe(Map<TableDataType, Object> out);
+	public abstract void describe(Map<String, Object> out);
 
 	public abstract IniSection generateIniSection(int simTime);
 

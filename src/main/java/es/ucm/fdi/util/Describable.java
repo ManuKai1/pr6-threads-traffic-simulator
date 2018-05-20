@@ -15,5 +15,5 @@ public interface Describable {
      * @param out - mapa a actualizar con los 
      *              pares clave-valor
      */
-    public void describe(Map<TableDataType, Object> out);
+    public void describe(Map<String, Object> out);
 }

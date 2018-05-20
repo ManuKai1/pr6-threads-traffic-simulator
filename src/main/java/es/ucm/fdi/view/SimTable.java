@@ -12,9 +12,10 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.AbstractTableModel;
 
+import es.ucm.fdi.model.events.Event;
+import es.ucm.fdi.model.simobj.Junction;
 import es.ucm.fdi.model.simobj.SimObject;
 import es.ucm.fdi.util.Describable;
-import es.ucm.fdi.util.TableDataType;
 
 /**
  * Clase que representa un panel en Swing con una
@@ -33,7 +34,7 @@ public class SimTable extends JPanel {
      * Lista con los nombres de las columnas
      * de la tabla.
      */
-    private List<TableDataType> headers;
+    private List<String> headers;
 
     /**
      * Lista con los objetos {@code Describable} que
@@ -57,7 +58,7 @@ public class SimTable extends JPanel {
          * cada objeto utilando el método {code describe()}
          * en la método {@link #getValueAt(int, int)}.
          */
-        public Map<TableDataType, Object> elementData = new HashMap<>();
+        public Map<String, Object> elementData = new HashMap<>();
 
         /**
          * Mapa utilizado para actualizar las JCheckBox de la tabla
@@ -86,12 +87,12 @@ public class SimTable extends JPanel {
         public Object getValueAt(int rowIndex, int columnIndex) {
             
             // Caso de la numeración de la tabla de eventos.
-            if ( headers.get(columnIndex) == TableDataType.E_NUM ) {
+            if ( headers.get(columnIndex) == Event.descriptionCols[0] ) {
                 return  Integer.toString(rowIndex + 1);
             }
 
             // Caso de los checks para acotar reports.
-            if ( headers.get(columnIndex) == TableDataType.REPORT ) {
+            if ( headers.get(columnIndex) == Junction.descriptionCols[0] ) {
                 Boolean check = reportChecks.get(rowIndex);
 
                 if (check == null) {
@@ -116,7 +117,7 @@ public class SimTable extends JPanel {
          */
         @Override
         public Class<?> getColumnClass(int columnIndex) {
-            if (headers.get(columnIndex) == TableDataType.REPORT) {
+            if (headers.get(columnIndex) == Junction.descriptionCols[0]) {
                 return Boolean.class;
             }
             else {
@@ -131,7 +132,7 @@ public class SimTable extends JPanel {
          */
         @Override
         public boolean isCellEditable(int rowIndex, int columnIndex) {
-            if ( headers.get(columnIndex) == TableDataType.REPORT ) {
+            if ( headers.get(columnIndex) == Junction.descriptionCols[0] ) {
                 return true;
             }
             else {
@@ -146,7 +147,7 @@ public class SimTable extends JPanel {
          */
         @Override
         public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
-            if ( headers.get(columnIndex) == TableDataType.REPORT ) {
+            if ( headers.get(columnIndex) == Junction.descriptionCols[0] ) {
                 reportChecks.put(rowIndex, (Boolean) aValue);
             }
         }
@@ -157,7 +158,7 @@ public class SimTable extends JPanel {
      * array de cabeceras {@code head} y una lista de elementos
      * {@code elements} cuya información se va a mostrar.
      */
-    public SimTable(TableDataType[] head, List<? extends Describable> elements) {
+    public SimTable(String[] head, List<? extends Describable> elements) {
         super( new BorderLayout() );
         
         headers = new ArrayList<>(Arrays.asList(head));
@@ -226,7 +227,7 @@ public class SimTable extends JPanel {
     public List<SimObject> getSelected() {
         List<SimObject> selected = new ArrayList<>();
         
-        int columnIndex = headers.indexOf(TableDataType.REPORT);
+        int columnIndex = headers.indexOf(Junction.descriptionCols[0]);
 
         for (int row = 0; row < tableElements.size(); ++row) {
             if ( (Boolean) model.getValueAt(row, columnIndex) ) {

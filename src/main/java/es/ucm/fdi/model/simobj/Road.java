@@ -11,13 +11,21 @@ import java.util.NoSuchElementException;
 
 import es.ucm.fdi.ini.IniSection;
 import es.ucm.fdi.model.simulation.SimulationException;
-import es.ucm.fdi.util.TableDataType;
 
 /**
  * Clase que representa una carretera como un objeto
  * de simulación. Hereda de {@link SimObject}
  */
 public class Road extends SimObject {
+
+	/**
+	 * Array estático con los nombres de las columnas de
+	 * la {@code SimTable} de {@code Road}s.
+	 */
+	public static String[] descriptionCols = {
+		"Report", "ID",
+		"Type", "Source", "Target", "Length", "Max speed", "Vehicles"
+	};
 	
 	/**
 	 * Etiqueta que encabeza el informe de una 
@@ -372,20 +380,20 @@ public class Road extends SimObject {
 	 * @param out {@inheritDoc}
 	 */
 	@Override
-	public void describe(Map<TableDataType, Object> out) {
+	public void describe(Map<String, Object> out) {
 		String source = fromJunction.getID();
 		String target = toJunction.getID();
 		String length = Integer.toString(this.length);
 		String maxSpeed = Integer.toString(this.speedLimit);
 		String state = getRoadStateDescription();
 
-		out.put(TableDataType.ID, id);
-		out.put(TableDataType.R_TYPE, getType());
-		out.put(TableDataType.R_SOURCE, source);
-		out.put(TableDataType.R_TARGET, target);
-		out.put(TableDataType.R_LENGHT, length);
-		out.put(TableDataType.R_MAX, maxSpeed);
-		out.put(TableDataType.R_STATE, state);
+		out.put(descriptionCols[1], id);
+		out.put(descriptionCols[2], getType());
+		out.put(descriptionCols[3], source);
+		out.put(descriptionCols[4], target);
+		out.put(descriptionCols[5], length);
+		out.put(descriptionCols[6], maxSpeed);
+		out.put(descriptionCols[7], state);
 	}
 
 	/**

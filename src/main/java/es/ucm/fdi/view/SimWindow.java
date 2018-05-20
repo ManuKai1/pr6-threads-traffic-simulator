@@ -61,7 +61,6 @@ import es.ucm.fdi.model.simulation.TrafficSimulation.Listener;
 import es.ucm.fdi.model.simulation.TrafficSimulation.UpdateEvent;
 import es.ucm.fdi.util.Describable;
 import es.ucm.fdi.util.MultiTreeMap;
-import es.ucm.fdi.util.TableDataType;
 
 /**
  * JFrame que representa la interfaz gráfica de la simulación.
@@ -91,21 +90,6 @@ public class SimWindow extends JFrame {
 
 	// Para el menu contextual de eventos
 	private final String FRIENDLY_KEY = "friendly";
-
-	// Para las tablas.
-	private final TableDataType[] eventDataHeaders = { TableDataType.E_NUM, TableDataType.E_TIME,
-			TableDataType.E_TYPE };
-
-	private final TableDataType[] junctionDataHeaders = { TableDataType.REPORT, TableDataType.ID, TableDataType.J_TYPE,
-			TableDataType.J_GREEN, TableDataType.J_RED, };
-
-	private final TableDataType[] roadDataHeaders = { TableDataType.REPORT, TableDataType.ID, TableDataType.R_TYPE,
-			TableDataType.R_SOURCE, TableDataType.R_TARGET, TableDataType.R_LENGHT, TableDataType.R_MAX,
-			TableDataType.R_STATE, };
-
-	private final TableDataType[] vehicleDataHeaders = { TableDataType.REPORT, TableDataType.ID, TableDataType.V_TYPE,
-			TableDataType.V_ROAD, TableDataType.V_LOCATION, TableDataType.V_SPEED, TableDataType.V_KM,
-			TableDataType.V_FAULTY, TableDataType.V_ROUTE };
 
 	private Controller control;
 	private OutputStream reports = null;
@@ -402,7 +386,7 @@ public class SimWindow extends JFrame {
 		MultiTreeMap<Integer, Event> eventsMap = control.getSimulator().getEvents();
 		List<Event> eventsList = eventsMap.valuesList();
 
-		eventsTable = new SimTable(eventDataHeaders, eventsList);
+		eventsTable = new SimTable(Event.descriptionCols, eventsList);
 
 		eventsAndReports.add(eventsTable);
 	}
@@ -427,7 +411,7 @@ public class SimWindow extends JFrame {
 	private void addJunctionsTable() {
 		List<Junction> junctions = new ArrayList<>(control.getSimulator().getRoadMap().getJunctions().values());
 
-		junctionsTable = new SimTable(junctionDataHeaders, junctions);
+		junctionsTable = new SimTable(Junction.descriptionCols, junctions);
 
 		tablesPanel.add(junctionsTable);
 	}
@@ -438,7 +422,7 @@ public class SimWindow extends JFrame {
 	private void addRoadsTable() {
 		List<Road> roads = new ArrayList<>(control.getSimulator().getRoadMap().getRoads().values());
 
-		roadsTable = new SimTable(roadDataHeaders, roads);
+		roadsTable = new SimTable(Road.descriptionCols, roads);
 		tablesPanel.add(roadsTable);
 	}
 
@@ -448,7 +432,7 @@ public class SimWindow extends JFrame {
 	private void addVehiclesTable() {
 		List<Vehicle> vehicles = new ArrayList<>(control.getSimulator().getRoadMap().getVehicles().values());
 
-		vehiclesTable = new SimTable(vehicleDataHeaders, vehicles);
+		vehiclesTable = new SimTable(Vehicle.descriptionCols, vehicles);
 		tablesPanel.add(vehiclesTable);
 	}
 

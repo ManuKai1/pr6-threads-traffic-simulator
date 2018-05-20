@@ -22,7 +22,7 @@ import es.ucm.fdi.ini.Ini;
 import es.ucm.fdi.view.SimWindow;
 
 
-public class ExampleMain {
+public class Launcher {
 
 	/**
 	 * Default time limit if none indicated by user.
@@ -193,7 +193,7 @@ public class ExampleMain {
 	private static void parseHelpOption(CommandLine line, Options cmdLineOptions) {
 		if ( line.hasOption("h") ) {
 			HelpFormatter formatter = new HelpFormatter();
-			formatter.printHelp(ExampleMain.class.getCanonicalName(), cmdLineOptions, true);
+			formatter.printHelp(Launcher.class.getCanonicalName(), cmdLineOptions, true);
 			
 			System.exit(0);
 		}

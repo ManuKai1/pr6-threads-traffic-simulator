@@ -6,13 +6,21 @@ import java.util.Map;
 
 import es.ucm.fdi.ini.IniSection;
 import es.ucm.fdi.model.simulation.SimulationException;
-import es.ucm.fdi.util.TableDataType;
 
 /**
  * Clase que representa un coche como un objeto
  * de simulación. Hereda de {@link SimObject}
  */
 public class Vehicle extends SimObject {
+
+	/**
+	 * Array estático con los nombres de las columnas de
+	 * la {@code SimTable} de {@code Vehicle}s.
+	 */
+	public static String[] descriptionCols = {
+		"Report", "ID",
+		"Type", "Road", "Location", "Speed", "Km", "Faulty time", "Itinerary"
+	};
 
 	/**
 	 * Etiqueta que encabeza el informe de un
@@ -222,7 +230,7 @@ public class Vehicle extends SimObject {
 	 * @param out {@inheritDoc}
 	 */
 	@Override
-	public void describe(Map<TableDataType, Object> out) {
+	public void describe(Map<String, Object> out) {
 		// Strings
 		String type = getType();
 		String road = this.road.getID();
@@ -233,14 +241,14 @@ public class Vehicle extends SimObject {
 		String route = getRouteDescription();
 
 		// Map update
-		out.put(TableDataType.ID, id);
-		out.put(TableDataType.V_TYPE, type);
-		out.put(TableDataType.V_ROAD, road);
-		out.put(TableDataType.V_LOCATION, location);
-		out.put(TableDataType.V_SPEED, speed);
-		out.put(TableDataType.V_KM, km);
-		out.put(TableDataType.V_FAULTY, faulty);
-		out.put(TableDataType.V_ROUTE, route);
+		out.put(descriptionCols[1], id);
+		out.put(descriptionCols[2], type);
+		out.put(descriptionCols[3], road);
+		out.put(descriptionCols[4], location);
+		out.put(descriptionCols[5], speed);
+		out.put(descriptionCols[6], km);
+		out.put(descriptionCols[7], faulty);
+		out.put(descriptionCols[8], route);
 	}
 
 	/**
