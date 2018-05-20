@@ -15,7 +15,6 @@ import es.ucm.fdi.model.SimObj.CarVehicle;
  */
 public class NewCarVehicleBuilder extends EventBuilder {
 
-	// ** ATRIBUTOS ** //
 	/**
 	 * Etiqueta utilizada en las {@code IniSection}s
 	 * para representar este tipo de eventos.
@@ -29,7 +28,6 @@ public class NewCarVehicleBuilder extends EventBuilder {
 	 */
 	private static final String TYPE = "car";
 
-	// ** CONSTRUCTOR ** //
 	/**
 	 * Constructor de {@link NewCarVehicleBuilder} que 
 	 * pasa el atributo {@code SECTION_TAG} al 
@@ -39,7 +37,6 @@ public class NewCarVehicleBuilder extends EventBuilder {
 		super(SECTION_TAG);
 	}
 
-	// ** MÉTODO DE PARSE ** //
 	/**
 	 * Método de parsing que comprueba si la 
 	 * {@code IniSection} pasada como argumento 

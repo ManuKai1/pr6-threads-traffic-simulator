@@ -13,7 +13,6 @@ import es.ucm.fdi.model.SimObj.DirtRoad;
  */
 public class NewDirtRoadBuilder extends EventBuilder {
 
-	// ** ATRIBUTOS ** //
 	/**
 	 * Etiqueta utilizada en las {@code IniSection}s
 	 * para representar este tipo de eventos.
@@ -27,7 +26,6 @@ public class NewDirtRoadBuilder extends EventBuilder {
 	 */
 	private static final String TYPE = "dirt";
 
-	// ** CONSTRUCTOR ** //
     /**
 	 * Constructor de {@link NewDirtRoadBuilder} que 
 	 * pasa el atributo {@code SECTION_TAG} al 
@@ -37,7 +35,6 @@ public class NewDirtRoadBuilder extends EventBuilder {
         super(SECTION_TAG);
     }
 
-	// ** MÉTODO DE PARSE ** //
     /**
 	 * Método de parsing que comprueba si la 
 	 * {@code IniSection} pasada como argumento 

@@ -21,7 +21,6 @@ import es.ucm.fdi.model.simulation.SimulationException;
  */
 public class RobinJunction extends Junction {
 
-    // ** ATRIBUTOS ** //
     /**
      * Tiempo mínimo de duración de un semáforo.
      */
@@ -57,7 +56,6 @@ public class RobinJunction extends Junction {
      */
     protected boolean usefulGreen = true;
 
-    // ** CONSTRUCTOR ** //
     /**
      * Constructor de {@link RobinJunction}.
      * 
@@ -71,7 +69,6 @@ public class RobinJunction extends Junction {
         maxLightTime = maxTime;
     }
 
-    // ** MÉTODOS COMPLEMENTARIOS DE AVANCE ** //
     /**
      * {@inheritDoc}
      * <p>
@@ -197,7 +194,6 @@ public class RobinJunction extends Junction {
         }
     }
 
-    // ** MÉTODO DE INFORME (+ COMPLEMENTARIOS) ** //
     /**
      * {@inheritDoc}
      * <p>
@@ -275,7 +271,6 @@ public class RobinJunction extends Junction {
         return timeLapses.get(road) - elapsedTime;
     }
 
-    // ** MÉTODOS ADICIONALES ** //
     /**
      * Añade una nueva {@code Road} de entrada a la 
      * {@code RobinJunction}. Al introducir una entrante,

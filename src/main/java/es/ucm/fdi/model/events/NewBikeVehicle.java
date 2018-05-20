@@ -17,7 +17,6 @@ import es.ucm.fdi.model.simulation.TrafficSimulation;
  */
 public class NewBikeVehicle extends NewVehicle {
 
-	// ** CONSTRUCTOR ** //
 	/**
 	 * Constructor de {@link BikeVehicle}.
 	 * 
@@ -32,7 +31,6 @@ public class NewBikeVehicle extends NewVehicle {
 		super(newTime, ID, max, trip);
 	}
 
-	// ** MÉTODO DE EJECUCIÓN ** //
 	/**
 	 * {@inheritDoc}
 	 * <p>
@@ -60,7 +58,6 @@ public class NewBikeVehicle extends NewVehicle {
 		}
 	}
 
-	// ** MÉTODO DE DESCRIPCIÓN ** //
 	/**
 	 * <p>
 	 * Devuelve la descripción {@code NewBikeVehicle}
@@ -81,7 +78,6 @@ public class NewBikeVehicle extends NewVehicle {
 		return description.toString();
 	}
 
-	// ** MÉTODO DE NUEVO VEHÍCULO ** //
 	/**
 	 * Método que genera un nuevo {@code BikeVehicle}
 	 * a partir de los atributos del evento.

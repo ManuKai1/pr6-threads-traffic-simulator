@@ -14,7 +14,6 @@ import es.ucm.fdi.model.events.NewBikeVehicle;
  */
 public class NewBikeVehicleBuilder extends EventBuilder {
 	
-	// ** ATRIBUTOS ** //
 	/**
 	 * Etiqueta utilizada en las {@code IniSection}s
 	 * para representar este tipo de eventos.
@@ -28,7 +27,6 @@ public class NewBikeVehicleBuilder extends EventBuilder {
 	 */
 	private static final String TYPE = "bike";
 
-	// ** CONSTRUCTOR ** //
 	/** 
 	 * Constructor de {@link NewBikeVehicleBuilder} que 
 	 * pasa el atributo <code>SECTION_TAG</code> al 
@@ -38,7 +36,6 @@ public class NewBikeVehicleBuilder extends EventBuilder {
 		super(SECTION_TAG);
 	}
 
-	// ** MÉTODO DE PARSE ** //
 	/**
 	 * Método de parsing que comprueba si la 
 	 * {@code IniSection} pasada como argumento 

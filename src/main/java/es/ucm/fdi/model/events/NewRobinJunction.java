@@ -12,7 +12,6 @@ import es.ucm.fdi.model.simulation.TrafficSimulation;
  */
 public class NewRobinJunction extends NewJunction {
     
-    // ** ATRIBUTOS ** //
     /**
      * Tiempo mínimo de encendido del semáforo.
      */
@@ -23,7 +22,6 @@ public class NewRobinJunction extends NewJunction {
      */
     private int maxTime;
 
-    // ** CONSTRUCTOR ** //
     /**
      * Constructor de {@link NewRobinJunction}.
      * 
@@ -39,7 +37,6 @@ public class NewRobinJunction extends NewJunction {
         maxTime = maxT;
     }
 
-    // ** MÉTODO DE EJECUCIÓN ** //
     /**
      * {@inheritDoc}
      * <p>
@@ -65,7 +62,6 @@ public class NewRobinJunction extends NewJunction {
         }
     }
 
-    // ** MÉTODO DE DESCRIPCIÓN ** //
     /**
 	 * <p>
 	 * Devuelve la descripción {@code NewRobinJunction}
@@ -86,7 +82,6 @@ public class NewRobinJunction extends NewJunction {
 		return 	description.toString();
 	}
 
-    // ** MÉTODO DE NUEVA INTERSECCIÓN ** //
     /**
      * Método que genera una nueva {@code RobinJunction}ç
      * a partir de los actributos del <code>Event</code>.

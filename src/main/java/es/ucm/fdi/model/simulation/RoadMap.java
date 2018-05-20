@@ -14,20 +14,16 @@ import es.ucm.fdi.model.SimObj.Vehicle;
  */
 public class RoadMap {
 
-    // ** MAPA ** //
     private Map<String, Junction>   junctionObjects = new LinkedHashMap<>();
     private Map<String, Road>       roadObjects = new LinkedHashMap<>();
     private Map<String, Vehicle>    vehicleObjects = new LinkedHashMap<>();
 
-    // ** CONSTRUCTOR ** //
     /**
      * Constructor vacío de {@link RoadMap}
      */
     public RoadMap() {
-        /*NADA*/
     }
 
-    // ** MÉTODOS DE ACCESO ** //
     /**
      * Devuelve el mapa de <code>Roads</code>.
      * 
@@ -55,7 +51,6 @@ public class RoadMap {
         return vehicleObjects;
     }
 
-    // ** MÉTODOS DE ADICIÓN ** //
     /**
      * Añade una <code>Junction</code> al mapa 
      * de <code>Junctions</code>.
@@ -86,7 +81,6 @@ public class RoadMap {
         vehicleObjects.put(newVehicle.getID(), newVehicle);
     }
 
-    // ** MÉTODOS DE COMPROBACIÓN ** //
     /**
      * Comprueba si existe una determinada <code>Junction</code>
      * en el mapa de la simulación.
@@ -126,7 +120,6 @@ public class RoadMap {
     	return vehicleObjects.containsKey(id);
     }
     
-    // ** MÉTODOS DE BÚSQUEDA ** //
     /**
      * Método que busca un <code>Vehicle</code> en el 
      * mapa de la simulación a partir de un id dado. 
@@ -172,7 +165,6 @@ public class RoadMap {
     	return roadObjects.get(id);
     }
 
-    // ** MÉTODO DE CLEAR ** //
     /**
      * Método que limpia <code>RoadMap</code> de todos
      * los <code>SimObj</code> introducidos durante la

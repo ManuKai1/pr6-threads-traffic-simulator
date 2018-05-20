@@ -13,7 +13,6 @@ import es.ucm.fdi.model.SimObj.CrowdedJunction;
  */
 public class NewCrowdedJunctionBuilder extends EventBuilder {
 
-    // ** ATRIBUTOS ** //
     /**
      * Etiqueta utilizada en las {@code IniSection}s
      * para representar este tipo de eventos.
@@ -27,7 +26,6 @@ public class NewCrowdedJunctionBuilder extends EventBuilder {
      */
     private static final String TYPE = "mc";
 
-    // ** CONSTRUCTOR ** //
     /**
      * Constructor de {@link NewCrowdedJunctionBuilder} que pasa
      * el parámetro {@code SECTION_TAG} al constructor de la
@@ -37,7 +35,6 @@ public class NewCrowdedJunctionBuilder extends EventBuilder {
         super(SECTION_TAG);
     }
 
-    // ** MÉTODO DE PARSE ** //
     /**
      * Método de parsing que comprueba si la 
      * {@code IniSection} pasada como argumento 

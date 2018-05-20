@@ -16,7 +16,6 @@ import es.ucm.fdi.ini.IniSection;
  */
 public class CrowdedJunction extends Junction {
 
-    // ** ATRIBUTOS ** //
     /**
      * Mapa de {@code incomingRoads} a sus respectivos 
      * intervalos de duración de sus semáforos.
@@ -28,7 +27,6 @@ public class CrowdedJunction extends Junction {
     */
     protected int elapsedTime = 0;
     
-    // ** CONSTRUCTOR ** //
     /**
      * Constructor de {@link CrowdedJunction}.
      * 
@@ -44,7 +42,6 @@ public class CrowdedJunction extends Junction {
         }
     }
     
-    // ** MÉTODOS COMPLEMENTARIOS DE AVANCE ** //
     /**
      * {@inheritDoc}
      * <p>
@@ -201,7 +198,6 @@ public class CrowdedJunction extends Junction {
         return crowdedPos;
     }
 
-    // ** MÉTODO DE INFORME (+ COMPLEMENTARIOS) ** //
     /**
      * {@inheritDoc}
      * <p>
@@ -280,7 +276,6 @@ public class CrowdedJunction extends Junction {
         return ( timeLapses.get(road) - elapsedTime );
     }
 
-    // ** MÉTODODS ADICIONALES ** //
     /**
      * {@inheritDoc}
      * 

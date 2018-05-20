@@ -11,7 +11,6 @@ import es.ucm.fdi.model.simulation.SimulationException;
  */
 public class BikeVehicle extends Vehicle {
 
-	// ** CONSTRUCTOR ** //
 	/**
 	 * Constructor de {@link BikeVehicle}.
 	 * 
@@ -27,7 +26,6 @@ public class BikeVehicle extends Vehicle {
 		super(identifier, trp, max);
 	}
 
-	// ** MÉTODOS COMPLEMENTARIOS DE AVANCE ** //
 	/**
 	 * Modifica el tiempo de avería según el comportamiento 
 	 * especial de un {@code BikeVehicle}.
@@ -43,7 +41,6 @@ public class BikeVehicle extends Vehicle {
 		}
 	}
 
-	// ** MÉTODO DE INFORME ** //
 	/**
 	 * Genera una {@code IniSection} que informa de los 
 	 * atributos del {@code BikeVehicle} en el tiempo 

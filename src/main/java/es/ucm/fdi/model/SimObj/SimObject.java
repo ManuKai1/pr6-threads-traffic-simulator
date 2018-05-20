@@ -13,32 +13,25 @@ import es.ucm.fdi.util.TableDataType;
  */
 public abstract class SimObject implements Describable { 
 
-	// ** ATRIBUTOS ** //
 	/**
 	 * Identificador del objeto de simulación.
 	 */
 	protected String id;	
 
-	// ** MÉTODO DE AVANCE ** //
 	/**
 	 * Método de avance de cualquier objeto de la 
 	 * simulación. Ocurre en un tick.
 	 */
 	public abstract void proceed();
 
-
-	// ** MÉTODO DE DESCRIPCIÓN ** //
 	/**
 	 * {@inheritDoc}
 	 */
 	@Override
 	public abstract void describe(Map<TableDataType, Object> out);
 
-
-	// ** MÉTODO DE INFORME ** //
 	public abstract IniSection generateIniSection(int simTime);
 
-	// ** CONSTRUCTOR ** //
 	/**
 	 * Constructor de {@link SimObject}.
 	 * 
@@ -49,7 +42,6 @@ public abstract class SimObject implements Describable {
 		id = identifier;
 	}
 	
-	// ** MÉTODO DE COMPARACIÓN ** //
 	/**
 	 * Comprueba si el {@code SimObject} es igual a 
 	 * un objeto dado {@code obj}.
@@ -81,7 +73,6 @@ public abstract class SimObject implements Describable {
 		return (id == other.id);
 	}	
 
-	// ** GETTERS/SETTERS ** //
 	/**
 	 * Devuelve el identificador del objeto 
 	 * de la simulación.

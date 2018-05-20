@@ -19,7 +19,6 @@ import es.ucm.fdi.util.TableDataType;
  */
 public class Road extends SimObject {
 	
-	// ** ATRIBUTOS ** //
 	/**
 	 * Etiqueta que encabeza el informe de una 
 	 * {@code Road} cualquiera.
@@ -82,7 +81,6 @@ public class Road extends SimObject {
 	 */
 	private boolean isGreen = false;
 
-	// ** COMPARADORES ** //
 	/**
 	 * Comparador según la localización de 2 {@code Vehicle}s
 	 * en la {@code Road}, para ordenar {@code vehiclesOnRoad} 
@@ -147,7 +145,6 @@ public class Road extends SimObject {
 		// ROADEND - (v1, 0.1s) < (v2, 0.5s) < (v3, 2s) < (v4, 3s) - ROADBEGIN
 	}
 
-	// ** CLASE INTERNA ** //
 	/**
 	 * Clase interna que guarda cada {@code Vehicle} con 
 	 * su tiempo de llegada al final de la {@code Road}.
@@ -170,7 +167,6 @@ public class Road extends SimObject {
 		}
 	}
 
-	// ** CONSTRUCTOR ** //	
 	/**
 	 * Constructor de {@link Road}.
 	 * 
@@ -192,7 +188,6 @@ public class Road extends SimObject {
 		getInOwnJunctions();	
 	}
 
-	// ** MÉTODO DE AVANCE (+ COMPLEMENTARIOS) ** //
 	/**
 	 * {@inheritDoc}
 	 * Método de AVANCE de {@code Road}.
@@ -369,7 +364,6 @@ public class Road extends SimObject {
 		return state;
 	}
 
-	// ** MÉTODO DE DESCRIPCIÓN (+ COMPLEMENTARIOS) ** //
 	/**
 	 * {@inheritDoc} Añade una {@code Road} al map, con 
 	 * los datos: id, source, target, length, max speed, 
@@ -430,7 +424,6 @@ public class Road extends SimObject {
 		return state.toString();
 	}
 
-	// ** MÉTODOS ADICIONALES (PARA AVANCE GENERAL) ** //
 	/**
 	 * Guarda un {@code Vehicle} y su tiempo de llegada 
 	 * en la lista de {@code Vehicle}s que van a entrar
@@ -552,7 +545,6 @@ public class Road extends SimObject {
 		isGreen = green;
 	}
 	
-	// ** MÉTODOS ADICIONALES (DE INFO) ** //
 	/**
 	 * <p>
 	 * Devuelve un {@code StringBuilder} con el estado de 

@@ -28,7 +28,6 @@ import es.ucm.fdi.model.simulation.TrafficSimulation.*;
  */
 public class Controller {
     
-    // ** ATRIBUTOS ** //
     /**
      * Archivo {@code .ini} dividido en 
      * {@code IniSection}s del que se extraen 
@@ -70,7 +69,6 @@ public class Controller {
 		}
     }
 
-    // ** CONSTRUCTOR ** //
     /**
      * Constructor de {@link Controller} que recibe 
      * el archivo {@code .ini}, el flujo de salida
@@ -89,7 +87,6 @@ public class Controller {
         simulator = new TrafficSimulation();
     }
 
-    // ** EJECUCIÓN EN BATCH ** //
     /**
      * <p>
      * Método de ejecución en modo {@code batch} que:
@@ -146,7 +143,6 @@ public class Controller {
 		} 
     }
 
-    // ** MÉTODOS DE SIMULACIÓN ** //
     /**
      * Carga los eventos del archivo de entrada
      * {@code iniInput} en el {@code simulator}.
@@ -209,7 +205,6 @@ public class Controller {
 		} 
     }
 
-    // ** SETTERS/GETTERS ** //
     /**
      * Cambia el archivo {@code Ini} de entrada
      * dado un {@code InputStream}

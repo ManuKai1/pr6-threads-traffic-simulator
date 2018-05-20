@@ -13,14 +13,12 @@ import es.ucm.fdi.model.SimObj.Junction;
  */
 public class NewJunctionBuilder extends EventBuilder {
 	
-	// ** ATRIBUTOS ** //
 	/**
 	 * Etiqueta utilizada en las {@code IniSection}s
 	 * para representar este tipo de eventos.
 	 */
 	private static final String SECTION_TAG = "new_junction";
 
-	// ** CONSTRUCTOR ** //
 	/**
 	 * Constructor de {@link NewJunctionBuilder} que 
 	 * pasa el atributo {@code SECTION_TAG} al 
@@ -30,7 +28,6 @@ public class NewJunctionBuilder extends EventBuilder {
 		super(SECTION_TAG);
 	}
 
-	// ** MÉTODO DE PARSE ** //
 	/**
 	 * Método de parsing que comprueba si la 
 	 * {@code IniSection} pasada como argumento 

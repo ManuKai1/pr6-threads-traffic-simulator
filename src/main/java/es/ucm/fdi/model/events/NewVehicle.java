@@ -16,7 +16,6 @@ import es.ucm.fdi.model.simulation.TrafficSimulation;
  */
 public class NewVehicle extends Event {
 
-	// ** ATRIBUTOS ** //
 	/**
 	 * Identificador del objeto de simulación.
 	 */
@@ -33,7 +32,6 @@ public class NewVehicle extends Event {
 	 */
 	protected List<String> tripID;
 
-	// ** CONSTRUCTOR ** //
 	/**
 	 * Constructor de {@link NewVehicle}.
 	 * 
@@ -50,7 +48,6 @@ public class NewVehicle extends Event {
 		tripID = trip;
 	}
 
-	// ** MÉTODO DE EJECUCIÓN ** //
 	/**
 	 * {@inheritDoc}
 	 * <p>
@@ -90,7 +87,6 @@ public class NewVehicle extends Event {
 		}
 	}
 
-	// ** MÉTODO DE DESCRIPCIÓN ** //
 	/**
 	 * <p>
 	 * Devuelve la descripción {@code NewVehicle}
@@ -111,7 +107,6 @@ public class NewVehicle extends Event {
 		return description.toString();
 	}
 
-	// ** MÉTODO DE NUEVO VEHÍCULO ** //
 	/**
 	 * Método que genera un nuevo {@code Vehicle}
 	 * a partir de los atributos del evento.
@@ -153,7 +148,6 @@ public class NewVehicle extends Event {
 		}
 	}
 
-	// ** MÉTODO DE COMPARACIÓN ** //
 	/**
 	 * {@inheritDoc}
 	 * <p>
