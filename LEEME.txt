@@ -1,36 +1,14 @@
-Autores: Manuel Llorca y Pablo Hernández
+﻿Autores: Manuel Llorca y Pablo Hernández
 
 Enlace a GitHub:
 
-Arreglos y cambios P4:
-- Se han pasado las pruebas a un test JUnit, ahora
-el main hace lo que debe.
-- Limpieza y actualización de Javadocs
-- Inicializaciones fuera del constructor cuando es posible.
-- Partición de grandes líneas en múltiples líneas.
-- Retirados existX y getX duplicados en TrafficSimulator
-- Execute de TrafficSimulator simplificado y separado
-en funciones. (Ahora las junctions son las que saben si
-tienen que avanzar o no)
-- Declaración de variables de tipo ancho.
-- Cambio de listas a mapas para evitar búsquedas lineales.
-- Quitada función grande que hacía una búsqueda, acelerada
-y acortada usando mapas en Junction.
-- Quitados equals redundantes, añadido uno que comprueba
-el id a nivel de SimObject
-- No hemos conseguido cambiar el comparador que utilizamos;
-soluciones más sencillas (como a.location - b.location) no
-han pasado las pruebas unitarias.
-- Quitados getReport que no se usaban.
-- Atributos públicos hechos privados (p.ej en Controller)
-- Mejora de gestión de excepciones; ahora se propagan
-añadiendo información contextual en vez de mostrar un mensaje.
-- Parseo de eventos mejorado; se han implementado funciones
-de parseo genérico de números, ids...
-
-Comentarios P5:
-- Parece ser que hay algún problema con los saltos de línea
-al leer un archivo. Ocurre también al añadir una plantilla
-de evento. Se crea un carácter invisible que hay que borrar.
-Parece ser que es porque usamos Windows, pero no sabemos
-cómo arreglarlo.
+Arreglos y cambios P5:
+-Mejorada la indicación de fallos de guardado y apertura de archivos.
+-Indicación: el pintado del mapa saca los colores del semáforo correctamente.
+ Además, los coches mantienen su color y lo cambian sólo en periodo de avería.
+-Eliminados comentarios tipo //** ATRIBUTOS **// innecesarios.
+-Eliminadas líneas vacías que se usaban para separar segmentos de código.
+-Añadida documentación de la interfaz Listener y de UpdateEvent que faltaban.
+-Arreglado un uso de evento de tipo error en vez de excepción desde TrafficSimulator
+-TableDataType eliminado por completo; ahora se usa como se ha indicado un
+public static String[] descriptionCols en los SimObj de primer nivel.

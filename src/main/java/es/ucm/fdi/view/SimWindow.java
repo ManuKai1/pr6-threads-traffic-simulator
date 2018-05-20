@@ -620,12 +620,14 @@ public class SimWindow extends JFrame {
 				infoText.setText("File saved.");
 
 			} catch (Exception e) {
-				JOptionPane.showMessageDialog(this, "Error while saving the file.");
+				JOptionPane.showMessageDialog(this, "Error while writing the file."
+						+ " Path: " + outFile.getPath());
 			} finally {
 				try {
 					os.close();
 				} catch (IOException e) {
-					JOptionPane.showMessageDialog(this, "Error while saving the file.");
+					JOptionPane.showMessageDialog(this, "Error while closing the file."
+							+ " Path: " + outFile.getPath());
 				}
 			}
 		}
@@ -757,7 +759,8 @@ public class SimWindow extends JFrame {
 			eventsTextArea.setText(text);
 			infoText.setText("Events file loaded.");
 		} catch (Exception e) {
-			JOptionPane.showMessageDialog(this, "Error while loading the file.");
+			JOptionPane.showMessageDialog(this, "Error while loading the file."
+					+ " Path: " + currentFile.getPath());
 		}
 	}
 

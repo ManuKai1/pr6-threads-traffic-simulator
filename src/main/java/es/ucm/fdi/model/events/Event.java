@@ -15,7 +15,7 @@ public abstract class Event implements Describable {
 
 	/**
 	 * Array estático con los nombres de las columnas de
-	 * la {@code SimTable} de {@code Junction}s.
+	 * las {@code SimTable}.
 	 */
 	public static String[] descriptionCols = {
 		"#", "Time", "Type"
