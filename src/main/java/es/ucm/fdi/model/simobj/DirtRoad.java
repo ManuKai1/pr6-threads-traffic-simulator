@@ -1,66 +1,54 @@
-package es.ucm.fdi.model.SimObj;
+package es.ucm.fdi.model.simobj;
 
 import java.util.ArrayList;
 
 import es.ucm.fdi.ini.IniSection;
 
 /**
- * Clase que representa una vía de varios carriles 
- * como un objeto de simulación. Hereda de {@link Road}
+ * Clase que representa un camino de tierra como 
+ * un objeto de simulación. Hereda de {@link Road}.
  */
-public class HighwayRoad extends Road {
+public class DirtRoad extends Road {
 
     /**
-     * Número de carriles de la autopista.
-     */
-    private int numLanes;
-
-    /**
-     * Constructor de {@link HighwayRoad}.
+     * Constructor de {@link DirtRoad}.
      * 
      * @param identifier    - identificador del objeto
      * @param len           - longitud de la vía
      * @param spLimit       - límite de velocidad
      * @param fromJ         - {@code Junction} donde empieza
      * @param toJ           - {@code Junction} donde acaba
-     * @param lanes         - número de carriles
      */
-    public HighwayRoad(String identifier, int len, int spLimit, 
-            Junction fromJ, Junction toJ, int lanes) {
-
+    public DirtRoad(String identifier, int len, int spLimit,
+            Junction fromJ, Junction toJ) {
         super(identifier, len, spLimit, fromJ, toJ);
-        numLanes = lanes;
     }
     
     /**
-     * Calcula la velocidad base de la {@code HighwayRoad}:   
-     * el mínimo entre la velocidad de congestión y el límite 
-     * de velocidad {@code speedLimit}.
+     * Calcula la velocidad base de la {@code DirtRoad}: 
+     * el límite de velocidad {@code speedLimit}.
      * 
      * @return  la velocidad base de 
-     *          la {@code HighwayRoad}.
+     *          la {@code DirtRoad}.
      */
     @Override
     protected int getBaseSpeed() {
-        // Cálculo de velocidadBase según la fórmula
-        int congestionSpeed = ( ( speedLimit * numLanes ) / ( Math.max(vehiclesOnRoad.size(), 1) ) ) + 1;
-
-        return ( Math.min(speedLimit, congestionSpeed) );
+        return speedLimit;
     }
 
     /**
      * <p>
-     * Modifica la velocidad que llevarán los {@code Vehicle}s 
-     * en la {@code HighwayRoad} previo avance.
+     * Modifica la velocidad que llevarán los 
+     * {@code Vehicle}s en la {@code DirtRoad} 
+     * previo avance.
      * </p> <p>
-     * En la {@code HighwayRoad}, el <code>reductionFactor</code> 
-     * es inicialmente {@code 1} y aumenta a {@code 2} si 
-     * el número de {@code Vehicle}s averiados supera al 
-     * número de carriles {@code numLanes}.
+     * En la {@code DirtRoad}, el {@code reductionFactor} 
+     * aumenta en uno por cada {@code Vehicle} averiado 
+     * delante de un {@code Vehicle}.
      * </p>
      * 
-     * @param onRoad    - lista de {@code Vehicle}s 
-     *                  en <code>DirtRoad</code>
+     * @param onRoad    lista de {@code Vehicle}s 
+     *                  en {@code DirtRoad}.
      */
     @Override
     protected void vehicleSpeedModifier(ArrayList<Vehicle> onRoad) {
@@ -70,34 +58,25 @@ public class HighwayRoad extends Road {
         // Factor de reducción de velocidad en caso de obstáculos delante.
         int reductionFactor = 1;
 
-        // Número de vehículos averiados.
-        int brokenVehicles = 0;
-
         // Se modifica la velocidad a la que avanzarán los vehículos,
         // teniendo en cuenta el factor de reducción.
         for (Vehicle v : onRoad) {
             v.setSpeed(baseSpeed / reductionFactor);
 
             if (v.getBreakdownTime() > 0) {
-                brokenVehicles += 1;
-            }
-
-            if (brokenVehicles >= numLanes) {
-                reductionFactor = 2;
+                reductionFactor += 1;
             }
         }
     }
     
-    // ** MÉTODO DE INFORME ** //
     /**
      * Genera una {@code IniSection} que informa de los 
-     * atributos de la {@code HighwayRoad} en el 
+     * atributos de la {@code DirtRoad} en el 
      * tiempo del simulador.
      * 
-     * @param simTime   - tiempo del simulador
-     * 
+     * @param simTime   tiempo del simulador
      * @return          {@code IniSection} con información
-     *                  de la {@code HighwayRoad}
+     *                  de la {@code DirtRoad}
      */
     @Override
     public IniSection generateIniSection(int simTime) {
@@ -124,6 +103,6 @@ public class HighwayRoad extends Road {
      */
     @Override
     protected String getType() {
-		return "lanes";
+		return "dirt";
 	}
 }

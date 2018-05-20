@@ -19,7 +19,6 @@ import es.ucm.fdi.model.simulation.RoadMap;
 @SuppressWarnings("serial")
 public class SimGraph extends JPanel {
 
-    // ** ATRIBUTOS ** //
     /**
      * El grafo.
      */
@@ -30,7 +29,6 @@ public class SimGraph extends JPanel {
      */
     private RoadMap roadMap;
 
-    // ** CONSTRUCTOR ** //
     /**
      * Constructos de {@link SimGraph} que recibe el
      * {@code RoadMap} de una simulación.
@@ -49,7 +47,6 @@ public class SimGraph extends JPanel {
         this.setVisible(true);
     }
 
-    // ** MÉTODO DE GENERACIÓND DEL GRAFO ** //
     /**
      * Genera un {@code Graph} a partir del {@code _roadMap} 
      * guardado como atributo y se pasa al atributo

@@ -69,7 +69,6 @@ import es.ucm.fdi.util.TableDataType;
 @SuppressWarnings("serial")
 public class SimWindow extends JFrame {
 
-	// ** CONSTANTES ** //
 	// Para la ventana
 	private final int DEF_HEIGHT = 1000, DEF_WIDTH = 1000;
 
@@ -108,11 +107,9 @@ public class SimWindow extends JFrame {
 			TableDataType.V_ROAD, TableDataType.V_LOCATION, TableDataType.V_SPEED, TableDataType.V_KM,
 			TableDataType.V_FAULTY, TableDataType.V_ROUTE };
 
-	// ** ATRIBUTOS ** //
 	private Controller control;
 	private OutputStream reports = null;
 
-	// ** PANELES ** //
 	// Panel de eventos e informes
 	private JPanel eventsAndReports = new JPanel(new GridLayout(1, 3));
 	// Panel de las tablas de los objetos
@@ -130,7 +127,6 @@ public class SimWindow extends JFrame {
 	// Arriba eventos e informes
 	private JSplitPane lowAndTop = new JSplitPane(JSplitPane.VERTICAL_SPLIT, eventsAndReports, tablesAndGraph);
 
-	// ** BARRAS DE MENÚ Y HERRAMIENTAS ** //
 	private JMenuBar menuBar = new JMenuBar();
 	private JMenu fileMenu = new JMenu("File");
 	private JMenu simulatorMenu = new JMenu("Simulator");
@@ -138,37 +134,28 @@ public class SimWindow extends JFrame {
 
 	private JToolBar toolBar = new JToolBar();
 
-	// ** SELECTOR DE ARCHIVOS ** //
 	private JFileChooser fileChooser = new JFileChooser();;
 	private File currentFile = null;
 
-	// ** SPINNER (SELECCIÓN DE TIEMPO DE EJECUCIÓN) ** //
 	private JSpinner stepsSpinner = new JSpinner();
 	private JTextField timeViewer = new JTextField("" + 0, 5);
 
-	// ** SPINNER (SELECCIÓN DE RETRASO DE EJECUCIÓN) ** //
 	private JSpinner delaySpinner = new JSpinner();
 
-	// ** ÁREAS DE TEXTO (EVENTOS E INFORMES) ** //
 	private JTextArea eventsTextArea = new JTextArea();
 	private JTextArea reportsTextArea = new JTextArea();
 
 	private JLabel infoText = new JLabel("Simulator initialized correctly.");
 
-	// ** TABLAS ** //
 	private SimTable eventsTable;
 	private SimTable junctionsTable;
 	private SimTable roadsTable;
 	private SimTable vehiclesTable;
 
-	// ** GRAFO ** //
 	private SimGraph simGraph;
 
-	// ** HILO DE EJECUCIÓN ** //
 	private StepsThread thread;
 
-	// ** ACCIONES ** //
-	// Recordar activarlas y desactivarlas
 	private SimulatorAction load = new SimulatorAction("Load Events", "open.png", "Load an events file", KeyEvent.VK_L,
 			"control shift L", () -> loadFile());
 
@@ -205,7 +192,6 @@ public class SimWindow extends JFrame {
 	private SimulatorAction exit = new SimulatorAction("Exit", "exit.png", "Exit the simulator", KeyEvent.VK_ESCAPE,
 			"control shift ESC", () -> quit());
 
-	// ** CLASE INTERNA ** //
 	/**
 	 * Clase interna que representa la redirección de los reports a su área de
 	 * texto.
@@ -218,7 +204,6 @@ public class SimWindow extends JFrame {
 
 	}
 
-	// ** CONSTRUCTOR E INICIALIZACIÓN DE GUI ** //
 	/**
 	 * Constructor de {@link SimWindow} dado un {@code Controller} y un posible
 	 * fichero de entrada.
@@ -284,7 +269,6 @@ public class SimWindow extends JFrame {
 		addEditor(); // menu contextual eventos
 	}
 
-	// ** MÉTODOS DE COMPONENTES ** //
 	/**
 	 * Función que crea la barra de menú.
 	 */
@@ -556,7 +540,6 @@ public class SimWindow extends JFrame {
 		});
 	}
 	
-	// ** MÉTODO DE UPDATE DE LA GUI ** //
 	/**
 	 * Recibe eventos y actualiza la GUI convenientemente.
 	 */
@@ -616,7 +599,6 @@ public class SimWindow extends JFrame {
 		};
 	}
 	
-	// ** MÉTODOS DE ACCIONES ** //
 	/**
 	 * Carga en su área correspondiente un fichero de eventos.
 	 */
@@ -780,7 +762,6 @@ public class SimWindow extends JFrame {
 		}
 	}
 
-	// ** MÉTODOS ADICIONALES ** //
 	/**
 	 * Método que escribe los datos de un fichero en la zona de eventos.
 	 */

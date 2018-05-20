@@ -24,7 +24,6 @@ import es.ucm.fdi.util.TableDataType;
 @SuppressWarnings("serial")
 public class SimTable extends JPanel {
 
-    // ** ATRIBUTOS ** //
     /**
      * Tabla en formato Swing.
      */
@@ -47,7 +46,6 @@ public class SimTable extends JPanel {
      */
     private ListOfMapsTableModel model;
 
-    // ** CLASE INTERNA ** //
     /**
      * Modelo de tabla para representar datos de objetos
      * {@code Describable}. Hereda de {@code AbstractTableModel}.
@@ -154,7 +152,6 @@ public class SimTable extends JPanel {
         }
     }
 
-    //** CONSTRUCTOR ** //
     /**
      * Constructor de una {@link #SimTable} que recibe un
      * array de cabeceras {@code head} y una lista de elementos
@@ -178,7 +175,6 @@ public class SimTable extends JPanel {
         );   
     }
 
-    // ** MÉTODOS DE MODIFICACIÓN ** //
     /** Método interno que llama indica al modelo que
      * los datos de la tabla han cambiado, para que se
      * actualicen en el {@code GUI}.
@@ -209,7 +205,6 @@ public class SimTable extends JPanel {
     	update();
     }
 
-    // ** MÉTODOS DE ACCESO ** //
     /**
      * Devuelve una lista con los elementos que describe
      * la tabla.

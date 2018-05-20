@@ -23,9 +23,6 @@ import es.ucm.fdi.util.MultiTreeMap;
  * tiempo de actual de la simulación.
  */
 public class TrafficSimulation {
-
-	
-	// ** CLASES INTERNAS (PARA EVENTOS) ** //
 	
 	/**
 	 * Interfaz interna del simulador que han de
@@ -89,7 +86,6 @@ public class TrafficSimulation {
 		}
 	}
 
-	// ** ATRIBUTOS ** //
 	/**
 	 * Mapa de eventos donde: {@code Integer} representa 
 	 * el tiempo de ejecución de un evento, {@code Event} 
@@ -113,15 +109,12 @@ public class TrafficSimulation {
 	 */
 	private int time = 0;
 	
-	// ** CONSTRUCTOR ** //
 	/**
 	 * Constructor vacío del simulador.
 	 */
 	public TrafficSimulation() {
-		/*NADA*/
 	}
 	
-	//** MÉTODO DE EJECUCIÓN DE LA SIMULACIÓN (+ COMPLEMENTARIOS) ** //
 	/**
 	 * Simula un número determinado de ticks y guarda 
 	 * el fichero de salida de esta ejecución.
@@ -273,7 +266,6 @@ public class TrafficSimulation {
 		fireUpdateEvent(EventType.NEW_EVENT, "New Event error.");
 	}
 	
-	// ** MÉTODOS DE GENERACIÓN DE INFORMER ** //
 	/**
 	 * Genera un string con informes de los {@code SimObject}s 
 	 * en la lista. Utilizdo para cargar el informe generado 
@@ -328,7 +320,6 @@ public class TrafficSimulation {
 		return iniFile;
 	}
 
-	// ** MÉTODOS DE MODIFICACIÓN DE LA SIMULACIÓN ** //
 	/**
 	 * Añade tiempo de avería a los {@code Vehicle}s con 
 	 * los ID de la lista. Además comprueba que existan 
@@ -388,7 +379,6 @@ public class TrafficSimulation {
 		roadMap.addJunction(newJunction);
 	}
 
-	// ** MÉTODOS DE LISTENERS ** //
 	/**
 	 *  Añade un {@code Listener} a la lista 
 	 * (además, implementa {@code REGISTERED}).
@@ -435,7 +425,6 @@ public class TrafficSimulation {
 		fireUpdateEvent(EventType.RESET, "Reset error");
 	}
 	
-	// ** MÉTODOS DE ACCESO ** //
 	/**
 	 * Devuelve el mapa de la simulación.
 	 * 
